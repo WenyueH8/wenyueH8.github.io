@@ -2,7 +2,7 @@
 
 import { FormEvent, useEffect, useMemo, useState } from "react";
 
-type DemoType = "arcproof" | "room" | "spelling";
+type DemoType = "arcproof" | "room" | "essay" | "spelling";
 
 const heroCapabilities = [
   {
@@ -252,9 +252,23 @@ const projects: Array<{
     ],
   },
   {
-    id: "spelling",
+    id: "essay",
     index: "03",
-    title: "IELTS Listening Spelling",
+    title: "Draftline",
+    subtitle: "雅思写作段落训练工具",
+    tags: ["Writing Coach", "Sentence Drill", "HTML"],
+    description:
+      "把一篇 Task 1 范文拆成可练习的写作路径：先理解段落功能，再完成整段翻译、逐句中译英和核心表达挖空。每个答案都能在同一页面即时对照，帮助学习者看见文章是如何组织出来的。",
+    highlights: [
+      "段落功能与数据逻辑拆解，不只背整篇范文",
+      "整段翻译 → 逐句练习 → 表达挖空的三层训练",
+      "参考译文、语法重点与作答进度可逐项展开",
+    ],
+  },
+  {
+    id: "spelling",
+    index: "04",
+    title: "LexiLoop",
     subtitle: "听力定位句与单词拼写练习",
     tags: ["Flashcards", "Error Loop", "HTML"],
     description:
@@ -351,6 +365,25 @@ function ProjectVisual({ type }: { type: DemoType }) {
             </div>
             <div className="commerce-note">淘宝购买链路 · 未接入</div>
           </div>
+        </div>
+      </div>
+    );
+  }
+
+  if (type === "essay") {
+    return (
+      <div className="product-window essay-window" role="img" aria-label="雅思写作段落训练工具交互设计预览">
+        <div className="window-top">
+          <span className="window-dot" /><span className="window-dot" /><span className="window-dot" />
+          <span className="window-title">draftline / paragraph practice</span>
+        </div>
+        <div className="essay-ui">
+          <div className="essay-ui-head"><span className="mini-label">TASK 1 · PARAGRAPH 02</span><b>1 / 10 已作答</b></div>
+          <div className="essay-progress"><span /></div>
+          <h4>概述：森林与木材占比的最大反差</h4>
+          <p>总体来看，非洲占全球森林的比例最大，但其木材占比却最低。</p>
+          <div className="essay-input">Africa accounted for the largest <i>________</i> of the world&apos;s forests.</div>
+          <div className="essay-ui-actions"><span>显示参考译文</span><span>查看语法重点</span></div>
         </div>
       </div>
     );
@@ -1354,6 +1387,76 @@ const spellingWords = [
   { word: "isolated", meaning: "孤立的；遥远的", sentence: "The research station is in an isolated area." },
 ];
 
+const essayParagraphs = [
+  { label: "01 / 引言", title: "说明比较对象", zh: "这两张饼图比较了全球森林和木材在五个不同地区之间的分布比例。", ref: "The pie charts compare the proportions of the world's forests and timber distributed across five different regions.", blank: "The pie charts compare the ________ of the world's forests and timber distributed across five different regions.", focus: "compare the proportions of...；be distributed across..." },
+  { label: "02 / 概述", title: "抓住最大反差", zh: "总体来看，非洲占全球森林的比例最大，但其木材占比却最低。", ref: "Overall, Africa accounted for the largest share of the world's forests but the smallest proportion of timber.", blank: "Africa accounted for the largest ________ of the world's forests.", focus: "account for the largest share；the smallest proportion" },
+  { label: "03 / 细节", title: "组织数据比较", zh: "就全球森林而言，非洲所占比例最大，为27%，北美洲紧随其后，为25%。", ref: "Regarding world forests, Africa made up the largest share at 27%, followed closely by North America at 25%.", blank: "Africa made ________ the largest share at 27%.", focus: "Regarding...；make up；followed closely by..." },
+];
+
+function EssayDemo() {
+  const [index, setIndex] = useState(1);
+  const [answer, setAnswer] = useState("");
+  const [paragraphAnswer, setParagraphAnswer] = useState("");
+  const [showRef, setShowRef] = useState(false);
+  const [showFocus, setShowFocus] = useState(false);
+  const [showSource, setShowSource] = useState(false);
+  const current = essayParagraphs[index];
+  const completed = Number(Boolean(answer.trim())) + Number(Boolean(paragraphAnswer.trim()));
+  const next = () => {
+    setIndex((value) => (value + 1) % essayParagraphs.length);
+    setAnswer("");
+    setParagraphAnswer("");
+    setShowRef(false);
+    setShowFocus(false);
+    setShowSource(false);
+  };
+
+  return (
+    <div className="essay-demo">
+      <header className="essay-demo-hero">
+        <div><span>IELTS ACADEMIC WRITING · TASK 1</span><h4>全球森林与木材分布</h4><p>段落式中译英训练：引言 → 概述 → 数据细节</p></div>
+        <b>{completed} / 2 已作答</b>
+        <div className="essay-demo-track"><span style={{ width: `${completed * 50}%` }} /></div>
+      </header>
+
+      <div className="essay-toolbar">
+        <button type="button" onClick={() => setShowSource((value) => !value)}>{showSource ? "隐藏段落原文" : "显示段落原文"}</button>
+        <button type="button" onClick={() => setShowRef(true)}>显示参考译文</button>
+        <button type="button" onClick={() => { setShowRef(false); setShowFocus(false); }}>隐藏全部答案</button>
+      </div>
+
+      <section className="essay-paragraph-card">
+        <div className="essay-demo-top">
+          <div><span className="demo-kicker">PARAGRAPH {index + 1}</span><h4>{current.label}｜{current.title}</h4><p className="essay-purpose"><b>本段功能：</b>先理解段落在全文中的作用，再检查数据、比较关系和衔接方式。</p></div>
+          <button type="button" onClick={next}>切换段落 <Arrow /></button>
+        </div>
+
+        {showSource && <div className="essay-source"><b>本段英文原文</b><p>{current.ref}</p></div>}
+
+        <div className="essay-whole">
+          <div><b>整段翻译（选做）</b><p>先尝试完整组织段落，再进入逐句训练。</p></div>
+          <textarea value={paragraphAnswer} onChange={(event) => setParagraphAnswer(event.target.value)} placeholder="请尝试将这一整段翻译成英文……" />
+        </div>
+
+        <article className="essay-sentence-card">
+          <div className="essay-sentence-meta"><span>1</span><p>第 {index + 1} 段 · 句子 1 / 1</p></div>
+          <p className="essay-zh">{current.zh}</p>
+          <label htmlFor="essay-answer">你的英文翻译</label>
+          <textarea id="essay-answer" value={answer} onChange={(event) => setAnswer(event.target.value)} placeholder="请独立翻译这句话……" />
+          <div className="essay-answer-buttons">
+            <button type="button" onClick={() => setShowRef((value) => !value)}>{showRef ? "隐藏参考译文" : "显示参考译文"}</button>
+            <button type="button" onClick={() => setShowFocus((value) => !value)}>{showFocus ? "隐藏语法重点" : "显示语法重点"}</button>
+          </div>
+          {showRef && <div className="essay-reference is-ref"><b>参考译文</b><p>{current.ref}</p></div>}
+          {showFocus && <div className="essay-reference is-focus"><b>本句核心表达</b><p>{current.focus}</p></div>}
+        </article>
+
+        <div className="essay-drill"><span>核心词汇与语法挖空</span><p>{current.blank}</p><button type="button" onClick={() => setShowRef((value) => !value)}>查看对应原句</button></div>
+      </section>
+    </div>
+  );
+}
+
 function SpellingDemo() {
   const [index, setIndex] = useState(0);
   const [answer, setAnswer] = useState("");
@@ -1442,7 +1545,7 @@ function DemoModal({ type, onClose }: { type: DemoType; onClose: () => void }) {
   return (
     <div className="modal-backdrop" onMouseDown={onClose}>
       <section
-        className={`demo-modal ${type === "room" ? "room-demo-modal" : ""} ${type === "arcproof" ? "arc-demo-modal" : ""}`}
+        className={`demo-modal ${type === "room" ? "room-demo-modal" : ""} ${type === "arcproof" ? "arc-demo-modal" : ""} ${type === "essay" ? "essay-demo-modal" : ""}`}
         role="dialog"
         aria-modal="true"
         aria-labelledby="demo-title"
@@ -1458,13 +1561,16 @@ function DemoModal({ type, onClose }: { type: DemoType; onClose: () => void }) {
         </div>
         {type === "arcproof" && <ArcDemo />}
         {type === "room" && <RoomDemo />}
+        {type === "essay" && <EssayDemo />}
         {type === "spelling" && <SpellingDemo />}
         <p className="demo-disclaimer">
           {type === "arcproof"
             ? "这是基于 ArcProof 0.6 真实产品结构制作的交互样例，使用预置素材演示完整工作流；本地正式版会调用 FFmpeg、FunASR、Qwen3-VL 与 DeepSeek Agent。"
             : type === "room"
               ? "照片只在当前浏览器中预览；推荐结果为 Demo 示例，淘宝购买跳转尚未接入。"
-              : "这是核心学习链路的轻量试用版。"}
+              : type === "essay"
+                ? "这是 Draftline 的核心训练链路：把范文拆成段落功能、翻译练习和表达挖空，所有内容均可在当前页面交互。"
+                : "这是核心学习链路的轻量试用版。"}
         </p>
       </section>
     </div>
@@ -1710,7 +1816,7 @@ export default function Home() {
                   <span>CASE {project.index}</span>
                   <div>{project.tags.map((tag) => <i key={tag}>{tag}</i>)}</div>
                 </div>
-                <h3>{project.title}</h3>
+                <h3 className="project-title">{project.title}</h3>
                 <p className="project-subtitle">{project.subtitle}</p>
                 <p className="project-description">{project.description}</p>
                 <ul>
