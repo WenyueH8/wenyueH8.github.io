@@ -25,6 +25,40 @@ const heroCapabilities = [
   },
 ];
 
+type HeroSlide = {
+  id: string;
+  src: string;
+  alt: string;
+  objectPosition: string;
+};
+
+const heroSlides: HeroSlide[] = [
+  {
+    id: "camera",
+    src: "/wenyue-photo.jpg",
+    alt: "胡文悦手持相机，在户外拍摄",
+    objectPosition: "center 44%",
+  },
+  {
+    id: "field",
+    src: "/wenyue-cheetah.webp",
+    alt: "胡文悦在赞比亚调研期间与猎豹合影",
+    objectPosition: "52% center",
+  },
+  {
+    id: "horn",
+    src: "/wenyue-horn-stage.webp",
+    alt: "胡文悦身着演出服，手持圆号",
+    objectPosition: "67% center",
+  },
+  {
+    id: "literature",
+    src: "/wenyue-literature.webp",
+    alt: "胡文悦在清华大学中文系展示论文训练材料",
+    objectPosition: "center 43%",
+  },
+];
+
 const internships = [
   {
     company: "字节跳动 · Gauth",
@@ -106,20 +140,23 @@ const internships = [
   },
 ];
 
-const contentWorks = [
-  {
-    id: "dramabox",
-    index: "01",
-    kicker: "SOCIAL VIDEO / GROWTH",
-    title: "DramaBox 海外社媒内容",
-    role: "创意剪辑 · 平台适配 · 数据复盘",
-    description:
-      "为 TikTok、YouTube、Instagram 与 Facebook 制作幕后花絮、POV 和剧情向短视频，并依据平台数据调整钩子、节奏与包装。",
-    facts: ["900 万+ 播放", "30 万+ 点赞", "4 个平台"],
-  },
-];
+type FilmWork = {
+  id: string;
+  index: string;
+  title: string;
+  duration: string;
+  kicker: string;
+  role: string;
+  description: string;
+  facts: string[];
+  genre: "documentary" | "fiction";
+  youtubeId?: string;
+  link?: string;
+  poster?: string;
+  previewSrc?: string;
+};
 
-const filmWorks = [
+const filmWorks: FilmWork[] = [
   {
     id: "salamalacong",
     index: "FILM 01",
@@ -129,6 +166,7 @@ const filmWorks = [
     role: "导演 · 摄影 · 剪辑",
     description: "以人物与日常观察展开的长纪录片，在生活细节、现场声音与真实表达中保留文化语境。",
     facts: ["人物观察", "长纪录片", "完整叙事"],
+    genre: "documentary",
     youtubeId: "48ayQpfuByo",
     link: "https://www.youtube.com/watch?v=48ayQpfuByo",
   },
@@ -141,6 +179,7 @@ const filmWorks = [
     role: "导演 · 摄影 · 剪辑",
     description: "记录支教现场的一天，以课堂、交流与环境细节呈现跨文化志愿经历中的真实关系。",
     facts: ["跨文化支教", "现场记录", "人物关系"],
+    genre: "documentary",
     youtubeId: "fkU8We9T_yw",
     link: "https://www.youtube.com/watch?v=fkU8We9T_yw",
   },
@@ -153,12 +192,25 @@ const filmWorks = [
     role: "导演 · 摄影 · 剪辑",
     description: "围绕坦赞铁路及其沿线记忆展开的短纪录影像，以实地拍摄连接历史、空间与当下生活。",
     facts: ["实地调研", "历史空间", "短纪录片"],
+    genre: "documentary",
     youtubeId: "AZR1_FlxtdI",
     link: "https://www.youtube.com/watch?v=AZR1_FlxtdI",
   },
+  {
+    id: "demonstrative-word",
+    index: "FILM 04",
+    title: "指示词",
+    duration: "10:16",
+    kicker: "FICTION SHORT",
+    role: "虚构短片 · 影像创作",
+    description: "一部以语言与人物关系为线索的校园虚构短片。完整成片已接入站内播放器，也可跳转 YouTube 观看。",
+    facts: ["虚构叙事", "校园影像", "完整成片"],
+    genre: "fiction",
+    youtubeId: "RUAFgwhESAA",
+    link: "https://www.youtube.com/watch?v=RUAFgwhESAA",
+    poster: "/demonstrative-word-poster.jpg",
+  },
 ];
-
-type FilmWork = (typeof filmWorks)[number];
 
 const projects: Array<{
   id: DemoType;
@@ -332,60 +384,148 @@ function ProjectVisual({ type }: { type: DemoType }) {
   );
 }
 
-function ContentVisual({ type }: { type: string }) {
+function HeroGallery({
+  activeIndex,
+  onSelect,
+  onPrevious,
+  onNext,
+  onPauseChange,
+}: {
+  activeIndex: number;
+  onSelect: (index: number) => void;
+  onPrevious: () => void;
+  onNext: () => void;
+  onPauseChange: (paused: boolean) => void;
+}) {
   return (
-    <div className="content-art content-art-reels" role="img" aria-label={`${type} 海外社媒短视频内容展示示意`}>
-      <div className="reel-frame reel-one">
-        <span>POV</span>
-        <i />
-        <b>01:08</b>
+    <div
+      className="hero-gallery"
+      onMouseEnter={() => onPauseChange(true)}
+      onMouseLeave={() => onPauseChange(false)}
+      onFocus={() => onPauseChange(true)}
+      onBlur={(event) => {
+        if (!event.currentTarget.contains(event.relatedTarget as Node | null)) onPauseChange(false);
+      }}
+      aria-roledescription="carousel"
+      aria-label="胡文悦的个人照片轮播"
+    >
+      <div className="hero-gallery-stage" aria-live="polite">
+        {heroSlides.map((slide, index) => (
+          <figure
+            className={`hero-slide ${
+              index === activeIndex
+                ? "is-active"
+                : index === (activeIndex + 1) % heroSlides.length
+                  ? "is-next"
+                  : index === (activeIndex - 1 + heroSlides.length) % heroSlides.length
+                    ? "is-previous"
+                    : "is-hidden"
+            }`}
+            aria-hidden={index !== activeIndex}
+            key={slide.id}
+          >
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={slide.src}
+              alt={index === activeIndex ? slide.alt : ""}
+              loading={index === 0 ? "eager" : "lazy"}
+              style={{ objectPosition: slide.objectPosition }}
+            />
+          </figure>
+        ))}
+        <span className="gallery-counter" aria-hidden="true">
+          {String(activeIndex + 1).padStart(2, "0")} / {String(heroSlides.length).padStart(2, "0")}
+        </span>
+        <div className="gallery-controls">
+          <button type="button" onClick={onPrevious} aria-label="上一张照片">←</button>
+          <button type="button" onClick={onNext} aria-label="下一张照片">→</button>
+        </div>
       </div>
-      <div className="reel-frame reel-two">
-        <span>BEHIND<br />THE SCENE</span>
-        <i />
-        <b>00:34</b>
+
+      <div className="gallery-pagination" role="tablist" aria-label="选择照片">
+        {heroSlides.map((slide, index) => (
+          <button
+            type="button"
+            role="tab"
+            aria-selected={index === activeIndex}
+            aria-label={`查看第 ${index + 1} 张照片`}
+            className={index === activeIndex ? "is-active" : ""}
+            onClick={() => onSelect(index)}
+            key={slide.id}
+          >
+            <span />
+          </button>
+        ))}
       </div>
-      <div className="reel-frame reel-three">
-        <span>STORY<br />HOOK</span>
-        <i />
-        <b>00:21</b>
-      </div>
-      <div className="reel-metric"><strong>9M+</strong><span>VIEWS</span></div>
     </div>
   );
 }
 
-function FilmCard({ work, onPlay }: { work: FilmWork; onPlay: () => void }) {
+function FilmPoster({ work, size = "large" }: { work: FilmWork; size?: "large" | "small" }) {
+  const src = work.poster ?? (work.youtubeId ? `https://i.ytimg.com/vi/${work.youtubeId}/${size === "large" ? "maxresdefault" : "hqdefault"}.jpg` : "");
+
+  if (!src) return null;
+
   return (
-    <article className={`film-card film-${work.id}`}>
-      <button className="film-cover-button" type="button" onClick={onPlay} aria-label={`播放纪录片《${work.title}》`}>
-        <span className="film-cover-fallback">
-          <b>{work.title}</b>
-          <small>DOCUMENTARY FILM</small>
-        </span>
-        {/* YouTube serves a lightweight poster image; the full video loads only after a click. */}
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src={`https://i.ytimg.com/vi/${work.youtubeId}/maxresdefault.jpg`}
-          alt={`纪录片《${work.title}》视频封面`}
-          loading="lazy"
-          onError={(event) => { event.currentTarget.style.opacity = "0"; }}
-        />
-        <span className="film-cover-shade" />
-        <span className="film-duration">{work.duration}</span>
-        <span className="film-play"><i /> 播放完整作品</span>
+    /* eslint-disable-next-line @next/next/no-img-element */
+    <img src={src} alt={`${work.title}视频封面`} loading="lazy" onError={(event) => { event.currentTarget.style.opacity = "0"; }} />
+  );
+}
+
+function FilmFeature({ work, onPlay }: { work: FilmWork; onPlay: () => void }) {
+  return (
+    <article className={`film-feature film-${work.genre}`} key={work.id}>
+      <button className="film-feature-cover" type="button" onClick={onPlay} aria-label={`播放《${work.title}》`}>
+        <span className="film-feature-fallback"><b>{work.title}</b><small>{work.kicker}</small></span>
+        <FilmPoster work={work} />
+        <span className="film-feature-shade" />
+        <span className="film-feature-number">{work.index}</span>
+        <span className="film-feature-duration">{work.duration}</span>
+        <span className="film-feature-play"><i /> {work.previewSrc ? "播放 36 秒节选" : "播放完整作品"}</span>
       </button>
-      <div className="film-copy">
-        <div className="film-meta"><span>{work.index}</span><b>{work.kicker}</b></div>
-        <h4>{work.title}</h4>
-        <p className="film-role">{work.role}</p>
+      <div className="film-feature-copy">
+        <div className="film-feature-meta"><span>{work.kicker}</span><b>{work.genre === "fiction" ? "FICTION" : "DOCUMENTARY"}</b></div>
+        <h3>{work.title}</h3>
+        <p className="film-feature-role">{work.role}</p>
         <p>{work.description}</p>
-        <div className="film-footer">
+        <div className="film-feature-footer">
           <div>{work.facts.map((fact) => <span key={fact}>{fact}</span>)}</div>
           <button type="button" onClick={onPlay}>观看 <Arrow /></button>
         </div>
       </div>
     </article>
+  );
+}
+
+function FilmIndex({
+  works,
+  activeId,
+  onSelect,
+}: {
+  works: FilmWork[];
+  activeId: string;
+  onSelect: (id: string) => void;
+}) {
+  return (
+    <div className="film-index" aria-label="作品索引">
+      {works.map((work) => (
+        <button
+          className={work.id === activeId ? "is-active" : ""}
+          type="button"
+          onClick={() => onSelect(work.id)}
+          aria-pressed={work.id === activeId}
+          key={work.id}
+        >
+          <span className="film-index-thumb"><FilmPoster work={work} size="small" /><i /></span>
+          <span className="film-index-copy">
+            <small>{work.index} · {work.duration}</small>
+            <b>{work.title}</b>
+            <em>{work.kicker}</em>
+          </span>
+          <span className="film-index-arrow">↗</span>
+        </button>
+      ))}
+    </div>
   );
 }
 
@@ -410,16 +550,26 @@ function VideoModal({ work, onClose }: { work: FilmWork; onClose: () => void }) 
           <button type="button" onClick={onClose} aria-label="关闭视频">×</button>
         </div>
         <div className="film-player">
-          <iframe
-            src={`https://www.youtube.com/embed/${work.youtubeId}?rel=0&modestbranding=1`}
-            title={`播放纪录片《${work.title}》`}
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowFullScreen
-          />
+          {work.previewSrc ? (
+            <video src={work.previewSrc} poster={work.poster} controls autoPlay playsInline preload="metadata">
+              当前浏览器无法播放此视频。
+            </video>
+          ) : (
+            <iframe
+              src={`https://www.youtube-nocookie.com/embed/${work.youtubeId}?rel=0&modestbranding=1&autoplay=1`}
+              title={`播放《${work.title}》`}
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            />
+          )}
         </div>
         <div className="film-modal-foot">
           <p>{work.description}</p>
-          <a href={work.link} target="_blank" rel="noreferrer">在 YouTube 打开 <Arrow diagonal /></a>
+          {work.link ? (
+            <a href={work.link} target="_blank" rel="noreferrer">在 YouTube 打开 <Arrow diagonal /></a>
+          ) : (
+            <span>站内节选 · 完整成片本地保存</span>
+          )}
         </div>
       </section>
     </div>
@@ -1324,10 +1474,50 @@ function DemoModal({ type, onClose }: { type: DemoType; onClose: () => void }) {
 export default function Home() {
   const [activeDemo, setActiveDemo] = useState<DemoType | null>(null);
   const [activeFilm, setActiveFilm] = useState<string | null>(null);
+  const [selectedFilm, setSelectedFilm] = useState(filmWorks[0].id);
+  const [filmFilter, setFilmFilter] = useState<"all" | FilmWork["genre"]>("all");
+  const [heroSlide, setHeroSlide] = useState(0);
+  const [heroPaused, setHeroPaused] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeInternship, setActiveInternship] = useState(0);
+  const [contactCopied, setContactCopied] = useState(false);
   const currentInternship = internships[activeInternship];
   const currentFilm = filmWorks.find((work) => work.id === activeFilm) ?? null;
+  const visibleFilms = filmFilter === "all" ? filmWorks : filmWorks.filter((work) => work.genre === filmFilter);
+  const selectedShowcaseFilm = visibleFilms.find((work) => work.id === selectedFilm) ?? visibleFilms[0] ?? filmWorks[0];
+
+  useEffect(() => {
+    if (heroPaused || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    const timer = window.setInterval(() => {
+      setHeroSlide((current) => (current + 1) % heroSlides.length);
+    }, 4800);
+    return () => window.clearInterval(timer);
+  }, [heroPaused]);
+
+  useEffect(() => {
+    if (!menuOpen) return;
+    const closeMenuOnEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setMenuOpen(false);
+    };
+    window.addEventListener("keydown", closeMenuOnEscape);
+    return () => window.removeEventListener("keydown", closeMenuOnEscape);
+  }, [menuOpen]);
+
+  const chooseFilmFilter = (filter: "all" | FilmWork["genre"]) => {
+    setFilmFilter(filter);
+    const firstMatch = filter === "all" ? filmWorks[0] : filmWorks.find((work) => work.genre === filter);
+    if (firstMatch) setSelectedFilm(firstMatch.id);
+  };
+
+  const copyContact = async () => {
+    try {
+      await navigator.clipboard.writeText("15210890818");
+      setContactCopied(true);
+      window.setTimeout(() => setContactCopied(false), 1800);
+    } catch {
+      setContactCopied(false);
+    }
+  };
 
   return (
     <main>
@@ -1339,7 +1529,7 @@ export default function Home() {
         <button
           type="button"
           className="menu-button"
-          aria-label="打开导航"
+          aria-label={menuOpen ? "关闭导航" : "打开导航"}
           aria-expanded={menuOpen}
           onClick={() => setMenuOpen((value) => !value)}
         >
@@ -1380,15 +1570,13 @@ export default function Home() {
         </div>
 
         <div className="hero-portrait">
-          <div className="portrait-frame">
-            {/* The uploaded portrait is a static, already optimized portfolio asset. */}
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/wenyue-photo.jpg" alt="胡文悦手持相机，在户外拍摄" />
-          </div>
-          <div className="portrait-palette" aria-label="莫兰迪配色：灰蓝、灰粉与淡黄">
-            <i /><i /><i />
-            <span>PRODUCT × STORYTELLING</span>
-          </div>
+          <HeroGallery
+            activeIndex={heroSlide}
+            onSelect={setHeroSlide}
+            onPrevious={() => setHeroSlide((current) => (current - 1 + heroSlides.length) % heroSlides.length)}
+            onNext={() => setHeroSlide((current) => (current + 1) % heroSlides.length)}
+            onPauseChange={setHeroPaused}
+          />
         </div>
       </section>
 
@@ -1434,9 +1622,26 @@ export default function Home() {
                   <button
                     type="button"
                     role="tab"
+                    id={`internship-tab-${index}`}
+                    aria-controls="internship-panel"
                     className={activeInternship === index ? "active" : ""}
                     aria-selected={activeInternship === index}
+                    tabIndex={activeInternship === index ? 0 : -1}
                     onClick={() => setActiveInternship(index)}
+                    onKeyDown={(event) => {
+                      if (!["ArrowLeft", "ArrowRight", "Home", "End"].includes(event.key)) return;
+                      event.preventDefault();
+                      const nextIndex = event.key === "Home"
+                        ? 0
+                        : event.key === "End"
+                          ? internships.length - 1
+                          : event.key === "ArrowRight"
+                            ? (index + 1) % internships.length
+                            : (index - 1 + internships.length) % internships.length;
+                      setActiveInternship(nextIndex);
+                      const tabs = event.currentTarget.parentElement?.querySelectorAll<HTMLButtonElement>('button[role="tab"]');
+                      tabs?.[nextIndex]?.focus();
+                    }}
                     key={item.company}
                   >
                     <span className="career-dot"><i /></span>
@@ -1447,7 +1652,14 @@ export default function Home() {
                 ))}
               </div>
 
-              <article className="career-detail glass-card" key={currentInternship.company} role="tabpanel" aria-live="polite">
+              <article
+                className="career-detail glass-card"
+                id="internship-panel"
+                key={currentInternship.company}
+                role="tabpanel"
+                aria-labelledby={`internship-tab-${activeInternship}`}
+                aria-live="polite"
+              >
                 <div className="career-detail-head">
                   <div>
                     <span>{currentInternship.focus}</span>
@@ -1530,38 +1742,49 @@ export default function Home() {
             <p>产品之外，我长期做内容和影像。对平台、节奏与叙事的判断，也构成了我理解用户和创作工具的另一条路径。</p>
           </div>
 
-          <div className="content-work-grid">
-            {contentWorks.map((work) => (
-              <article className={`content-work-card content-work-${work.id}`} key={work.id}>
-                <ContentVisual type={work.id} />
-                <div className="content-work-copy">
-                  <div className="content-work-meta">
-                    <span>{work.index}</span>
-                    <b>{work.kicker}</b>
-                  </div>
-                  <h3>{work.title}</h3>
-                  <p className="content-role">{work.role}</p>
-                  <p className="content-description">{work.description}</p>
-                  <div className="content-facts">
-                    {work.facts.map((fact) => <span key={fact}>{fact}</span>)}
-                  </div>
-                </div>
-              </article>
-            ))}
-          </div>
+          <aside className="content-practice" aria-label="DramaBox 内容创作经历">
+            <div className="content-practice-copy">
+              <span>CONTENT PRACTICE · DRAMABOX</span>
+              <h3>把平台数据，带回下一次创作判断。</h3>
+              <p>负责海外短剧社媒内容的选题、剪辑和平台适配。这里不展示未公开的商业素材，只保留可验证的结果与方法。</p>
+            </div>
+            <div className="content-practice-metrics">
+              <article><strong>9M+</strong><span>累计播放</span></article>
+              <article><strong>300K+</strong><span>累计点赞</span></article>
+              <article><strong>04</strong><span>海外平台</span></article>
+            </div>
+          </aside>
 
           <div className="film-showcase">
             <div className="film-showcase-head">
               <div>
-                <span>SELECTED DOCUMENTARY</span>
-                <h3>三部纪录片，三种靠近现实的方法。</h3>
+                <span>SELECTED FILMS · 04 WORKS</span>
+                <h3>三部纪录片，一部虚构短片。</h3>
               </div>
-              <p>点击封面即可在站内观看完整作品。视频保留在 YouTube 不公开链接中，网页只加载轻量封面，不会拖慢打开速度。</p>
+              <p>选择右侧作品即可切换主舞台。四部作品都已接入 YouTube 完整成片，可直接在站内观看。</p>
             </div>
-            <div className="film-grid">
-              {filmWorks.map((work) => (
-                <FilmCard work={work} onPlay={() => setActiveFilm(work.id)} key={work.id} />
+
+            <div className="film-filter" aria-label="筛选影像作品">
+              {([
+                ["all", "全部作品"],
+                ["documentary", "纪录片"],
+                ["fiction", "虚构短片"],
+              ] as const).map(([value, label]) => (
+                <button
+                  type="button"
+                  className={filmFilter === value ? "is-active" : ""}
+                  onClick={() => chooseFilmFilter(value)}
+                  aria-pressed={filmFilter === value}
+                  key={value}
+                >
+                  {label}
+                </button>
               ))}
+            </div>
+
+            <div className="film-browser">
+              <FilmFeature work={selectedShowcaseFilm} onPlay={() => setActiveFilm(selectedShowcaseFilm.id)} key={selectedShowcaseFilm.id} />
+              <FilmIndex works={visibleFilms} activeId={selectedShowcaseFilm.id} onSelect={setSelectedFilm} />
             </div>
           </div>
 
@@ -1572,10 +1795,14 @@ export default function Home() {
         <div className="section-shell footer-inner">
           <div>
             <span className="eyebrow">LET&apos;S BUILD SOMETHING USEFUL</span>
-            <h2>想聊聊 AI 产品、影像，<br />或者一个值得做出来的问题？</h2>
+            <h2>想聊聊 AI 产品、影像，或者一个值得做出来的问题？</h2>
           </div>
           <div className="footer-contact">
             <a href="mailto:nicolehwy@163.com">nicolehwy@163.com <Arrow diagonal /></a>
+            <button type="button" onClick={copyContact} aria-label="复制电话和微信号 15210890818">
+              电话 / 微信 · 15210890818
+              <span aria-live="polite">{contactCopied ? "已复制" : "复制"}</span>
+            </button>
             <a href="https://github.com/WenyueH8" target="_blank" rel="noreferrer">GitHub / WenyueH8 <Arrow diagonal /></a>
             <p>© 2026 Hu Wenyue · Designed & coded with curiosity.</p>
           </div>
