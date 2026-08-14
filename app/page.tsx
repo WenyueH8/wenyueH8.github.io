@@ -375,7 +375,7 @@ function ProjectVisual({ type }: { type: DemoType }) {
       <div className="product-window essay-window" role="img" aria-label="雅思写作段落训练工具交互设计预览">
         <div className="window-top">
           <span className="window-dot" /><span className="window-dot" /><span className="window-dot" />
-          <span className="window-title">draftline / paragraph practice</span>
+          <span className="window-title">译构 / paragraph practice</span>
         </div>
         <div className="essay-ui">
           <div className="essay-ui-head"><span className="mini-label">TASK 1 · PARAGRAPH 02</span><b>1 / 10 已作答</b></div>
