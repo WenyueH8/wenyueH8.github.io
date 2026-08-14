@@ -254,7 +254,7 @@ const projects: Array<{
   {
     id: "essay",
     index: "03",
-    title: "Draftline",
+    title: "译构",
     subtitle: "雅思写作段落训练工具",
     tags: ["Writing Coach", "Sentence Drill", "HTML"],
     description:
@@ -1569,7 +1569,7 @@ function DemoModal({ type, onClose }: { type: DemoType; onClose: () => void }) {
             : type === "room"
               ? "照片只在当前浏览器中预览；推荐结果为 Demo 示例，淘宝购买跳转尚未接入。"
               : type === "essay"
-                ? "这是 Draftline 的核心训练链路：把范文拆成段落功能、翻译练习和表达挖空，所有内容均可在当前页面交互。"
+                ? "这是译构的核心训练链路：把范文拆成段落功能、翻译练习和表达挖空，所有内容均可在当前页面交互。"
                 : "这是核心学习链路的轻量试用版。"}
         </p>
       </section>
