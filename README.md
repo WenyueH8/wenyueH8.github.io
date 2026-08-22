@@ -4,6 +4,8 @@
 
 线上地址：<https://wenyueh8.github.io/>
 
+英文版本：<https://wenyueh8.github.io/en/>
+
 ## 主要内容
 
 - ArcProof：面向纪录片创作者的本地素材分析与叙事编排 Agent
@@ -16,6 +18,12 @@
 ```bash
 npm install
 npm run build
+```
+
+英文页面由 `scripts/translate-portfolio-en.mjs` 从主页面生成；更新中文内容或翻译表后，先运行：
+
+```bash
+node scripts/translate-portfolio-en.mjs
 ```
 
 GitHub Actions 会在 `main` 分支更新后自动构建并部署到 GitHub Pages。

@@ -23,6 +23,12 @@ export default defineConfig({
   build: {
     outDir: fileURLToPath(new URL("./dist-github", import.meta.url)),
     emptyOutDir: true,
+    rollupOptions: {
+      input: {
+        home: fileURLToPath(new URL("./github-pages/index.html", import.meta.url)),
+        english: fileURLToPath(new URL("./github-pages/en/index.html", import.meta.url)),
+      },
+    },
   },
   resolve: {
     alias: {

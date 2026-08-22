@@ -7,21 +7,21 @@ type DemoType = "arcproof" | "room" | "essay" | "spelling";
 const heroCapabilities = [
   {
     index: "01",
-    title: "产品判断",
-    detail: "用户研究 · PRD · 0→1",
-    proof: "从真实问题到可运行产品",
+    title: "Product Judgment",
+    detail: "User Research · PRD · 0→1",
+    proof: "From a real problem to a working product",
   },
   {
     index: "02",
-    title: "AI 与实验",
-    detail: "Prompt · 数据分析 · Agent",
-    proof: "AI Tutor 好评率 +7%",
+    title: "AI & Experimentation",
+    detail: "Prompting · Data Analysis · Agents",
+    proof: "AI Tutor positive ratings +7%",
   },
   {
     index: "03",
-    title: "内容叙事",
-    detail: "影像创作 · 跨平台增长",
-    proof: "海外内容播放 900万+",
+    title: "Content & Narrative",
+    detail: "Filmmaking · Cross-platform Growth",
+    proof: "9M+ views on overseas content",
   },
 ];
 
@@ -36,105 +36,105 @@ const heroSlides: HeroSlide[] = [
   {
     id: "camera",
     src: "/wenyue-photo.jpg",
-    alt: "胡文悦手持相机，在户外拍摄",
+    alt: "Wenyue Hu filming outdoors with a camera",
     objectPosition: "center 44%",
   },
   {
     id: "field",
     src: "/wenyue-cheetah.webp",
-    alt: "胡文悦在赞比亚调研期间与猎豹合影",
+    alt: "Wenyue Hu with a cheetah during fieldwork in Zambia",
     objectPosition: "52% center",
   },
   {
     id: "horn",
     src: "/wenyue-horn-stage.webp",
-    alt: "胡文悦身着演出服，手持圆号",
+    alt: "Wenyue Hu in concert attire holding a French horn",
     objectPosition: "67% center",
   },
   {
     id: "literature",
     src: "/wenyue-literature.webp",
-    alt: "胡文悦在清华大学中文系展示论文训练材料",
+    alt: "Wenyue Hu presenting academic work in Tsinghua's Department of Chinese Language and Literature",
     objectPosition: "center 43%",
   },
 ];
 
 const internships = [
   {
-    company: "字节跳动 · Gauth",
-    role: "AI 产品经理实习生",
+    company: "ByteDance · Gauth",
+    role: "AI Product Manager Intern",
     time: "2025.11 — 2026.06",
-    focus: "AI Tutor 优化 · 语言学习 0→1 · 跨市场数据",
+    focus: "AI Tutor Optimization · 0→1 Language Learning · Cross-market Data",
     summary:
-      "负责 AI Tutor 体验优化与语言学习模块 0→1 设计，在模型能力、学习效果和用户感受之间找到可落地的产品方案。",
-    evidence: ["好评率 +7%", "10+ 版 Prompt", "10+ 轮跨市场分析"],
+      "Improved the AI Tutor experience and designed a language-learning module from 0 to 1, turning model capabilities into product choices that work for learners.",
+    evidence: ["Positive ratings +7%", "10+ prompt versions", "10+ cross-market analyses"],
     details: [
       {
         label: "AI TUTOR",
-        title: "把模型答案变成更清楚的学习体验",
-        body: "主导东南亚针对优化、组件化板书与负反馈优化三条实验线，累计迭代 10+ 版核心 Prompt，降低无效解释和过强的 AI 感。",
+        title: "Turn model answers into a clearer learning experience",
+        body: "Led three experiment tracks—Southeast Asia localization, modular whiteboards, and negative-feedback handling—and iterated 10+ versions of the core prompt to reduce irrelevant explanations and robotic responses.",
       },
       {
         label: "0→1 MODULE",
-        title: "设计欧洲 K12 语言学习链路",
-        body: "完成竞品与法国、英国教材研究，搭建词汇、语法、口语等核心课程框架，并参与新模块从需求到方案的完整设计。",
+        title: "Design a European K–12 language-learning journey",
+        body: "Researched competing products and French and UK textbooks, built the core framework for vocabulary, grammar, and speaking, and helped take the new module from user needs to product design.",
       },
       {
         label: "DATA",
-        title: "用跨市场数据修正产品判断",
-        body: "完成 10+ 轮用户数据分析，覆盖高频题、学科正确率、多语种需求与流失节点，建立核心指标看板支持迭代决策。",
+        title: "Refine product judgment with cross-market data",
+        body: "Completed 10+ rounds of cross-market analysis across frequent queries, subject-level accuracy, multilingual needs, and churn points, then built a metrics dashboard to guide iteration.",
       },
     ],
   },
   {
-    company: "北京点众科技 · DramaBox",
-    role: "海外社媒创意剪辑实习生",
+    company: "Beijing Dianzhong Technology · DramaBox",
+    role: "Overseas Social Media Creative Editing Intern",
     time: "2025.08 — 2025.11",
-    focus: "短视频创作 · 平台策略 · 内容增长",
+    focus: "Short-form Video · Platform Strategy · Content Growth",
     summary:
-      "面向 TikTok、YouTube、Instagram 与 Facebook 独立完成内容创作，并用运营数据持续调整跨平台内容策略。",
-    evidence: ["900 万+ 播放", "30 万+ 点赞", "4 个海外平台"],
+      "Created content independently for TikTok, YouTube, Instagram, and Facebook, using performance data to refine cross-platform strategy.",
+    evidence: ["9M+ views", "300K+ likes", "4 global platforms"],
     details: [
       {
         label: "CONTENT",
-        title: "独立完成从选题到后期的短视频生产",
-        body: "围绕 DramaBox 剧集制作幕后花絮、POV 与节奏型内容，独立完成素材判断、叙事重组、剪辑、字幕和声音处理。",
+        title: "Owned short-form production from topic selection to post",
+        body: "Produced behind-the-scenes, POV, and rhythm-led content for DramaBox series, independently handling footage selection, narrative restructuring, editing, subtitles, and sound.",
       },
       {
         label: "PLATFORM",
-        title: "针对四个平台调整内容表达",
-        body: "根据 TikTok、YouTube、Instagram 与 Facebook 的用户和分发差异，调整开场钩子、节奏、时长与包装方式。",
+        title: "Adapt content for four different platforms",
+        body: "Adapted hooks, pacing, duration, and packaging to the audience and distribution logic of TikTok, YouTube, Instagram, and Facebook.",
       },
       {
         label: "RESULT",
-        title: "让数据参与下一轮创作",
-        body: "持续复盘播放、互动与趋势表现，累计获得 900 万+ 播放和 30 万+ 点赞，并据此提出跨平台内容优化建议。",
+        title: "Bring data into the next creative cycle",
+        body: "Reviewed views, engagement, and trend performance, generating 9M+ views and 300K+ likes while turning the results into cross-platform content recommendations.",
       },
     ],
   },
   {
-    company: "清华大学美术学院 · 媒体与交互实验室",
-    role: "研究实习生",
+    company: "Academy of Arts & Design, Tsinghua University · Media and Interaction Lab",
+    role: "Research Intern",
     time: "2025.06 — 2025.09",
-    focus: "文化遗产数字化 · VR 叙事 · 体验优化",
+    focus: "Digital Heritage · VR Narrative · Experience Design",
     summary:
-      "参与新疆库车石窟壁画数字修复与 VR 体验项目，负责叙事脚本、情感渲染与交互路径优化。",
-    evidence: ["文化遗产数字化", "VR 互动体验", "跨职能协作"],
+      "Contributed to the digital restoration and VR experience for the Kucha cave murals in Xinjiang, focusing on narrative scripting, emotional storytelling, and interaction paths.",
+    evidence: ["Digital cultural heritage", "Interactive VR experience", "Cross-functional collaboration"],
     details: [
       {
         label: "RESEARCH",
-        title: "把研究材料整理成可体验的故事",
-        body: "参与库车石窟壁画数字修复项目的资料管理与内容研究，将历史背景、人物与空间信息转化为 VR 叙事脚本。",
+        title: "Turn research materials into an experienceable story",
+        body: "Managed research materials for the Kucha cave-mural restoration project and translated historical, character, and spatial information into a VR narrative script.",
       },
       {
         label: "EXPERIENCE",
-        title: "围绕情绪和行动设计观看路径",
-        body: "负责故事线与情感渲染，完善 VR 互动体验 Demo，使文化信息能通过空间、镜头和交互被用户理解。",
+        title: "Design the viewing path around emotion and action",
+        body: "Designed the story arc and emotional treatment for the VR demo, making cultural information understandable through space, framing, and interaction.",
       },
       {
         label: "COLLABORATION",
-        title: "用用户反馈推动跨职能迭代",
-        body: "分析体验反馈，与交互和设计成员协作优化关键路径，项目作为国家级文化遗产重点成果展示。",
+        title: "Use feedback to drive cross-functional iteration",
+        body: "Analyzed user feedback and worked with interaction and visual designers to improve key paths; the project was showcased as a major national cultural-heritage outcome.",
       },
     ],
   },
@@ -160,12 +160,12 @@ const filmWorks: FilmWork[] = [
   {
     id: "salamalacong",
     index: "FILM 01",
-    title: "撒拉玛拉空",
+    title: "Salama Lakong",
     duration: "22:06",
     kicker: "OBSERVATIONAL DOCUMENTARY",
-    role: "导演 · 摄影 · 剪辑",
-    description: "以人物与日常观察展开的长纪录片，在生活细节、现场声音与真实表达中保留文化语境。",
-    facts: ["人物观察", "长纪录片", "完整叙事"],
+    role: "Director · Cinematographer · Editor",
+    description: "A long-form observational documentary that preserves cultural context through everyday detail, location sound, and unforced expression.",
+    facts: ["Character observation", "Long-form documentary", "Complete narrative"],
     genre: "documentary",
     youtubeId: "48ayQpfuByo",
     link: "https://www.youtube.com/watch?v=48ayQpfuByo",
@@ -173,12 +173,12 @@ const filmWorks: FilmWork[] = [
   {
     id: "teaching-day",
     index: "FILM 02",
-    title: "支教日",
+    title: "A Day of Teaching",
     duration: "09:45",
     kicker: "FIELD DOCUMENTARY",
-    role: "导演 · 摄影 · 剪辑",
-    description: "记录支教现场的一天，以课堂、交流与环境细节呈现跨文化志愿经历中的真实关系。",
-    facts: ["跨文化支教", "现场记录", "人物关系"],
+    role: "Director · Cinematographer · Editor",
+    description: "A day in a volunteer classroom, using lessons, conversations, and environmental detail to capture the real relationships inside a cross-cultural experience.",
+    facts: ["Cross-cultural teaching", "Field observation", "Human relationships"],
     genre: "documentary",
     youtubeId: "fkU8We9T_yw",
     link: "https://www.youtube.com/watch?v=fkU8We9T_yw",
@@ -186,12 +186,12 @@ const filmWorks: FilmWork[] = [
   {
     id: "tazara-railway",
     index: "FILM 03",
-    title: "坦赞铁路",
+    title: "The TAZARA Railway",
     duration: "05:22",
     kicker: "RESEARCH FILM",
-    role: "导演 · 摄影 · 剪辑",
-    description: "围绕坦赞铁路及其沿线记忆展开的短纪录影像，以实地拍摄连接历史、空间与当下生活。",
-    facts: ["实地调研", "历史空间", "短纪录片"],
+    role: "Director · Cinematographer · Editor",
+    description: "A short documentary about the TAZARA Railway and the memories along its route, connecting history, place, and everyday life through field filming.",
+    facts: ["Field research", "History and place", "Short documentary"],
     genre: "documentary",
     youtubeId: "AZR1_FlxtdI",
     link: "https://www.youtube.com/watch?v=AZR1_FlxtdI",
@@ -199,12 +199,12 @@ const filmWorks: FilmWork[] = [
   {
     id: "demonstrative-word",
     index: "FILM 04",
-    title: "指示词",
+    title: "The Demonstrative",
     duration: "10:16",
     kicker: "FICTION SHORT",
-    role: "虚构短片 · 影像创作",
-    description: "一部以语言与人物关系为线索的校园虚构短片。完整成片已接入站内播放器，也可跳转 YouTube 观看。",
-    facts: ["虚构叙事", "校园影像", "完整成片"],
+    role: "Fiction Short · Filmmaking",
+    description: "A campus fiction short shaped by language and human relationships. The complete film is embedded on the site and is also available on YouTube.",
+    facts: ["Fiction narrative", "Campus film", "Complete film"],
     genre: "fiction",
     youtubeId: "RUAFgwhESAA",
     link: "https://www.youtube.com/watch?v=RUAFgwhESAA",
@@ -226,14 +226,14 @@ const projects: Array<{
     id: "arcproof",
     index: "01",
     title: "ArcProof",
-    subtitle: "AI 纪录片叙事与素材编排 Agent",
+    subtitle: "AI Documentary Narrative & Footage Orchestration Agent",
     tags: ["AI Agent", "Video Intelligence", "Local-first"],
     description:
-      "面向纪录片创作者的本地素材分析与叙事编排 Agent。它把原片、转写和画面证据整理成可追溯的母版叙事，再编译六种成片版本，并把叙事缺口直接转成补拍任务。",
+      "A local-first footage analysis and narrative orchestration agent for documentary creators. It organizes raw footage, transcripts, and visual evidence into a traceable canonical story, compiles six target cuts, and converts narrative gaps into pickup tasks.",
     highlights: [
-      "8 节点 Canonical Story Spine + 6 个目标版本",
-      "Removed Context Ledger 记录每次删减带来的语境风险",
-      "Gap Radar 生成补拍计划；可导出 EDL、SRT、CSV、JSON 与粗剪",
+      "8-node Canonical Story Spine + 6 target cuts",
+      "Removed Context Ledger records the contextual risk of every cut",
+      "Gap Radar generates pickup plans; exports EDL, SRT, CSV, JSON, and rough cuts",
     ],
     link: "https://github.com/WenyueH8/arcproof",
   },
@@ -241,42 +241,42 @@ const projects: Array<{
     id: "room",
     index: "02",
     title: "RoomMood",
-    subtitle: "租房软装风格推荐 Demo",
+    subtitle: "Rental-room Styling Recommendation Demo",
     tags: ["Image Input", "Recommendation", "Commerce Concept"],
     description:
-      "上传租房的原始照片后，Demo 会分析采光、色温与固定家具，再给出可切换的软装风格、预算方案和采购搜索词。项目已跑通图片输入与推荐展示，原计划继续连接淘宝完成购买转化，但真实商品跳转链路尚未接入。",
+      "After a user uploads a photo of a rental room, the demo analyzes lighting, color temperature, and fixed furniture, then offers switchable styling directions, budgets, and shopping keywords. Image input and recommendations are functional; the planned Taobao purchase flow is not yet connected.",
     highlights: [
-      "空间诊断 + 3 套风格与配色方案切换",
-      "预算档、租房约束与可勾选采购清单",
-      "支持复制淘宝搜索词；真实商品跳转仍待接入",
+      "Room diagnosis + 3 switchable styling and color directions",
+      "Budget tiers, rental constraints, and a selectable shopping list",
+      "Copyable Taobao search terms; live product links remain to be connected",
     ],
   },
   {
     id: "essay",
     index: "03",
-    title: "译构",
-    subtitle: "雅思写作段落训练工具",
+    title: "Draftline",
+    subtitle: "IELTS Writing Paragraph Practice Tool",
     tags: ["Writing Coach", "Sentence Drill", "HTML"],
     description:
-      "把一篇 Task 1 范文拆成可练习的写作路径：先理解段落功能，再完成整段翻译、逐句中译英和核心表达挖空。每个答案都能在同一页面即时对照，帮助学习者看见文章是如何组织出来的。",
+      "Turns an IELTS Task 1 model answer into a practice path: understand each paragraph's function, translate the full paragraph, work sentence by sentence, and complete key-expression cloze tasks. Reference answers stay on the same page so learners can see how the essay is built.",
     highlights: [
-      "段落功能与数据逻辑拆解，不只背整篇范文",
-      "整段翻译 → 逐句练习 → 表达挖空的三层训练",
-      "参考译文、语法重点与作答进度可逐项展开",
+      "Breaks down paragraph purpose and data logic instead of memorizing a model essay",
+      "Three layers: full-paragraph translation → sentence drills → expression cloze",
+      "Expandable reference translations, grammar notes, and progress",
     ],
   },
   {
     id: "spelling",
     index: "04",
     title: "LexiLoop",
-    subtitle: "听力定位句与单词拼写练习",
+    subtitle: "Listening-context & Spelling Practice",
     tags: ["Flashcards", "Error Loop", "HTML"],
     description:
-      "把单词表自动变成两种练习：先在雅思听力答案句中完成挖空拼写，再用中文提示进行闪卡回忆。提示强度可以逐步增加，错词会自动进入循环。",
+      "Converts a word list into two practice modes: spelling in IELTS listening answer sentences and flashcard recall from Chinese prompts. Hint strength increases progressively, while mistakes automatically return to the review loop.",
     highlights: [
-      "完全遮住、露出字母、显示答案三档提示",
-      "原句优先，没有原句时自动生成语境",
-      "错词优先复习，连续答对两次后移出错词池",
+      "Three hint levels: hidden, partial letters, and full answer",
+      "Uses source sentences when available and generates context when they are not",
+      "Prioritizes mistakes and removes a word after two consecutive correct answers",
     ],
   },
 ];
@@ -288,7 +288,7 @@ function Arrow({ diagonal = false }: { diagonal?: boolean }) {
 function ProjectVisual({ type }: { type: DemoType }) {
   if (type === "arcproof") {
     return (
-      <div className="product-window arc-window" role="img" aria-label="ArcProof 交互设计预览">
+      <div className="product-window arc-window" role="img" aria-label="ArcProof interactive product preview">
         <div className="window-top">
           <span className="window-dot" />
           <span className="window-dot" />
@@ -298,27 +298,27 @@ function ProjectVisual({ type }: { type: DemoType }) {
         <div className="arc-ui">
           <aside className="arc-sidebar">
             <div className="arc-mini-brand"><b>AP</b><span>ArcProof</span></div>
-            <span className="arc-mini-nav active"><i>01</i>素材与转写</span>
+            <span className="arc-mini-nav active"><i>01</i>Footage & Transcripts</span>
             <span className="arc-mini-nav"><i>02</i>Story Compiler</span>
             <span className="arc-mini-nav"><i>03</i>Gap Radar</span>
             <span className="arc-mini-nav"><i>04</i>Agent Trace</span>
-            <small>3 个素材 · 19:32</small>
+            <small>3 assets · 19:32</small>
           </aside>
           <div className="arc-main">
             <div className="mock-toolbar">
               <span>CANONICAL STORY SYSTEM</span>
               <b>LOCAL 0.6</b>
             </div>
-            <h4>一个母版故事，六个可追溯版本。</h4>
+            <h4>One canonical story. Six traceable cuts.</h4>
             <div className="arc-mini-metrics">
-              <span><b>8/8</b>母版节点</span>
-              <span><b>6</b>目标版本</span>
-              <span><b>4</b>叙事缺口</span>
+              <span><b>8/8</b>canonical nodes</span>
+              <span><b>6</b>target cuts</span>
+              <span><b>4</b>story gaps</span>
             </div>
             <div className="arc-mini-spine">
-              <span><i>01</i><b>人物与愿望</b><em>证据充分</em></span>
-              <span><i>02</i><b>现实阻力</b><em>部分成立</em></span>
-              <span><i>03</i><b>行动与选择</b><em>证据充分</em></span>
+              <span><i>01</i><b>Character & Desire</b><em>Grounded</em></span>
+              <span><i>02</i><b>Real-world Friction</b><em>Partially grounded</em></span>
+              <span><i>03</i><b>Action & Choice</b><em>Grounded</em></span>
             </div>
             <div className="arc-mini-versions"><span>20 MIN</span><span>5 MIN</span><span>90 SEC</span><span>30 SEC</span><span>9:16</span><span>EN SRT</span></div>
           </div>
@@ -329,7 +329,7 @@ function ProjectVisual({ type }: { type: DemoType }) {
 
   if (type === "room") {
     return (
-      <div className="product-window room-window" role="img" aria-label="租房软装推荐工具交互设计预览">
+      <div className="product-window room-window" role="img" aria-label="Rental-room styling tool preview">
         <div className="window-top">
           <span className="window-dot" />
           <span className="window-dot" />
@@ -338,32 +338,32 @@ function ProjectVisual({ type }: { type: DemoType }) {
         </div>
         <div className="room-ui">
           <div className="room-source-mini">
-            <span className="mini-label">原始房间</span>
+            <span className="mini-label">Original room</span>
             <div className="room-scene-mini">
               <i className="mini-window" />
               <i className="mini-bed" />
               <i className="mini-table" />
-              <span>采光偏弱</span>
+              <span>Low natural light</span>
             </div>
           </div>
           <div className="room-result-mini">
             <div className="room-recommend-head">
-              <span className="mini-label">推荐风格</span>
-              <b>匹配度 89%</b>
+              <span className="mini-label">Recommended style</span>
+              <b>89% match</b>
             </div>
-            <div className="mini-room-tabs"><span>诊断</span><span className="active">风格</span><span>清单</span></div>
-            <h4>雾蓝原木</h4>
-            <div className="palette-row" aria-label="推荐配色">
+            <div className="mini-room-tabs"><span>Diagnosis</span><span className="active">Style</span><span>List</span></div>
+            <h4>Mist Blue & Natural Wood</h4>
+            <div className="palette-row" aria-label="Recommended palette">
               <i className="palette-blue" />
               <i className="palette-wood" />
               <i className="palette-white" />
             </div>
             <div className="mini-product-list">
-              <span><i className="product-lamp" />落地灯 <b>￥159</b></span>
-              <span><i className="product-curtain" />浅蓝窗帘 <b>￥129</b></span>
-              <span><i className="product-rug" />短绒地毯 <b>￥199</b></span>
+              <span><i className="product-lamp" />Floor lamp <b>￥159</b></span>
+              <span><i className="product-curtain" />Pale blue curtains <b>￥129</b></span>
+              <span><i className="product-rug" />Low-pile rug <b>￥199</b></span>
             </div>
-            <div className="commerce-note">淘宝购买链路 · 未接入</div>
+            <div className="commerce-note">Taobao purchase flow · Not connected</div>
           </div>
         </div>
       </div>
@@ -372,25 +372,25 @@ function ProjectVisual({ type }: { type: DemoType }) {
 
   if (type === "essay") {
     return (
-      <div className="product-window essay-window" role="img" aria-label="雅思写作段落训练工具交互设计预览">
+      <div className="product-window essay-window" role="img" aria-label="IELTS writing practice tool preview">
         <div className="window-top">
           <span className="window-dot" /><span className="window-dot" /><span className="window-dot" />
-          <span className="window-title">译构 / paragraph practice</span>
+          <span className="window-title">Draftline / paragraph practice</span>
         </div>
         <div className="essay-ui">
-          <div className="essay-ui-head"><span className="mini-label">TASK 1 · PARAGRAPH 02</span><b>1 / 10 已作答</b></div>
+          <div className="essay-ui-head"><span className="mini-label">TASK 1 · PARAGRAPH 02</span><b>1 / 10 answered</b></div>
           <div className="essay-progress"><span /></div>
-          <h4>概述：森林与木材占比的最大反差</h4>
+          <h4>Overview: the largest contrast between forest and timber shares</h4>
           <p>总体来看，非洲占全球森林的比例最大，但其木材占比却最低。</p>
           <div className="essay-input">Africa accounted for the largest <i>________</i> of the world&apos;s forests.</div>
-          <div className="essay-ui-actions"><span>显示参考译文</span><span>查看语法重点</span></div>
+          <div className="essay-ui-actions"><span>Show reference answer</span><span>View grammar notes</span></div>
         </div>
       </div>
     );
   }
 
   return (
-    <div className="product-window spelling-window" role="img" aria-label="雅思听力单词工具交互设计预览">
+    <div className="product-window spelling-window" role="img" aria-label="IELTS listening vocabulary tool preview">
       <div className="window-top">
         <span className="window-dot" />
         <span className="window-dot" />
@@ -400,7 +400,7 @@ function ProjectVisual({ type }: { type: DemoType }) {
       <div className="spelling-ui">
         <div className="spelling-progress"><span /></div>
         <div className="word-card">
-          <span className="mini-label">中文提示</span>
+          <span className="mini-label">Chinese prompt</span>
           <h4>令人信服的</h4>
           <div className="letter-hint">
             <span>c</span><i /><i /><span>v</span><i /><i /><i /><i /><i /><span>g</span>
@@ -408,10 +408,10 @@ function ProjectVisual({ type }: { type: DemoType }) {
           <div className="fake-input">convincing<span className="cursor" /></div>
         </div>
         <div className="spelling-actions">
-          <button type="button" tabIndex={-1}>露出字母</button>
-          <button type="button" tabIndex={-1}>检查拼写</button>
+          <button type="button" tabIndex={-1}>Reveal letters</button>
+          <button type="button" tabIndex={-1}>Check spelling</button>
         </div>
-        <p className="pool-note">错词池 6 · 连续答对 1/2</p>
+        <p className="pool-note">Review pool 6 · Correct streak 1/2</p>
       </div>
     </div>
   );
@@ -440,7 +440,7 @@ function HeroGallery({
         if (!event.currentTarget.contains(event.relatedTarget as Node | null)) onPauseChange(false);
       }}
       aria-roledescription="carousel"
-      aria-label="胡文悦的个人照片轮播"
+      aria-label="Wenyue Hu photo carousel"
     >
       <div className="hero-gallery-stage" aria-live="polite">
         {heroSlides.map((slide, index) => (
@@ -470,18 +470,18 @@ function HeroGallery({
           {String(activeIndex + 1).padStart(2, "0")} / {String(heroSlides.length).padStart(2, "0")}
         </span>
         <div className="gallery-controls">
-          <button type="button" onClick={onPrevious} aria-label="上一张照片">←</button>
-          <button type="button" onClick={onNext} aria-label="下一张照片">→</button>
+          <button type="button" onClick={onPrevious} aria-label="Previous photo">←</button>
+          <button type="button" onClick={onNext} aria-label="Next photo">→</button>
         </div>
       </div>
 
-      <div className="gallery-pagination" role="tablist" aria-label="选择照片">
+      <div className="gallery-pagination" role="tablist" aria-label="Select a photo">
         {heroSlides.map((slide, index) => (
           <button
             type="button"
             role="tab"
             aria-selected={index === activeIndex}
-            aria-label={`查看第 ${index + 1} 张照片`}
+            aria-label={`View photo ${index + 1}`}
             className={index === activeIndex ? "is-active" : ""}
             onClick={() => onSelect(index)}
             key={slide.id}
@@ -501,20 +501,20 @@ function FilmPoster({ work, size = "large" }: { work: FilmWork; size?: "large" |
 
   return (
     /* eslint-disable-next-line @next/next/no-img-element */
-    <img src={src} alt={`${work.title}视频封面`} loading="lazy" onError={(event) => { event.currentTarget.style.opacity = "0"; }} />
+    <img src={src} alt={`${work.title} video poster`} loading="lazy" onError={(event) => { event.currentTarget.style.opacity = "0"; }} />
   );
 }
 
 function FilmFeature({ work, onPlay }: { work: FilmWork; onPlay: () => void }) {
   return (
     <article className={`film-feature film-${work.genre}`} key={work.id}>
-      <button className="film-feature-cover" type="button" onClick={onPlay} aria-label={`播放《${work.title}》`}>
+      <button className="film-feature-cover" type="button" onClick={onPlay} aria-label={`Play ${work.title}`}>
         <span className="film-feature-fallback"><b>{work.title}</b><small>{work.kicker}</small></span>
         <FilmPoster work={work} />
         <span className="film-feature-shade" />
         <span className="film-feature-number">{work.index}</span>
         <span className="film-feature-duration">{work.duration}</span>
-        <span className="film-feature-play"><i /> {work.previewSrc ? "播放 36 秒节选" : "播放完整作品"}</span>
+        <span className="film-feature-play"><i /> {work.previewSrc ? "Play 36-second excerpt" : "Play full film"}</span>
       </button>
       <div className="film-feature-copy">
         <div className="film-feature-meta"><span>{work.kicker}</span><b>{work.genre === "fiction" ? "FICTION" : "DOCUMENTARY"}</b></div>
@@ -523,7 +523,7 @@ function FilmFeature({ work, onPlay }: { work: FilmWork; onPlay: () => void }) {
         <p>{work.description}</p>
         <div className="film-feature-footer">
           <div>{work.facts.map((fact) => <span key={fact}>{fact}</span>)}</div>
-          <button type="button" onClick={onPlay}>观看 <Arrow /></button>
+          <button type="button" onClick={onPlay}>Watch <Arrow /></button>
         </div>
       </div>
     </article>
@@ -540,7 +540,7 @@ function FilmIndex({
   onSelect: (id: string) => void;
 }) {
   return (
-    <div className="film-index" aria-label="作品索引">
+    <div className="film-index" aria-label="Film index">
       {works.map((work) => (
         <button
           className={work.id === activeId ? "is-active" : ""}
@@ -580,17 +580,17 @@ function VideoModal({ work, onClose }: { work: FilmWork; onClose: () => void }) 
             <h3 id="film-modal-title">{work.title}</h3>
             <p>{work.role}</p>
           </div>
-          <button type="button" onClick={onClose} aria-label="关闭视频">×</button>
+          <button type="button" onClick={onClose} aria-label="Close video">×</button>
         </div>
         <div className="film-player">
           {work.previewSrc ? (
             <video src={work.previewSrc} poster={work.poster} controls autoPlay playsInline preload="metadata">
-              当前浏览器无法播放此视频。
+              This browser cannot play the video.
             </video>
           ) : (
             <iframe
               src={`https://www.youtube-nocookie.com/embed/${work.youtubeId}?rel=0&modestbranding=1&autoplay=1`}
-              title={`播放《${work.title}》`}
+              title={`Play ${work.title}`}
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
             />
@@ -599,9 +599,9 @@ function VideoModal({ work, onClose }: { work: FilmWork; onClose: () => void }) 
         <div className="film-modal-foot">
           <p>{work.description}</p>
           {work.link ? (
-            <a href={work.link} target="_blank" rel="noreferrer">在 YouTube 打开 <Arrow diagonal /></a>
+            <a href={work.link} target="_blank" rel="noreferrer">Open on YouTube <Arrow diagonal /></a>
           ) : (
-            <span>站内节选 · 完整成片本地保存</span>
+            <span>On-site excerpt · Full film archived locally</span>
           )}
         </div>
       </section>
@@ -614,20 +614,20 @@ type ArcVariantId = "doc20" | "short5" | "social90" | "trailer30" | "vertical90"
 type ArcGapSeverity = "critical" | "high" | "medium";
 
 const arcDemoAssets = [
-  { id: "interview", name: "interview_03.mp4", time: "12:48", meta: "1920×1080 · 1.2 GB", state: "模型转写", cue: "03:12", quote: "我第一次意识到，熟悉的地方也可以被重新看见。", kind: "采访" },
-  { id: "market", name: "market_broll_02.mp4", time: "04:26", meta: "3840×2160 · 860 MB", state: "画面已索引", cue: "01:08", quote: "主人公穿过早市，与摊主打招呼，手中拿着一叠旧照片。", kind: "环境 B-roll" },
-  { id: "photos", name: "old_photos_closeup.mov", time: "02:18", meta: "1920×1080 · 420 MB", state: "证据已绑定", cue: "00:44", quote: "旧照片中的街道与当下空镜形成前后对照。", kind: "行动画面" },
+  { id: "interview", name: "interview_03.mp4", time: "12:48", meta: "1920×1080 · 1.2 GB", state: "Model transcript", cue: "03:12", quote: "I realized for the first time that a familiar place could be seen anew.", kind: "Interview" },
+  { id: "market", name: "market_broll_02.mp4", time: "04:26", meta: "3840×2160 · 860 MB", state: "Visuals indexed", cue: "01:08", quote: "The protagonist walks through the morning market, greeting vendors with a stack of old photographs in hand.", kind: "Environmental B-roll" },
+  { id: "photos", name: "old_photos_closeup.mov", time: "02:18", meta: "1920×1080 · 420 MB", state: "Evidence linked", cue: "00:44", quote: "The street in the old photograph is contrasted with a present-day establishing shot.", kind: "Action footage" },
 ];
 
 const arcStoryNodes = [
-  { id: "hook", act: "ACT I", title: "熟悉的地方被重新看见", status: "grounded", confidence: 94, evidence: "interview_03.mp4 · 03:12–03:38", context: "保留离开家乡与回来的时间背景" },
-  { id: "character", act: "ACT I", title: "主人公与故乡的旧关系", status: "grounded", confidence: 91, evidence: "old_photos_closeup.mov · 00:44–01:06", context: "照片来源与拍摄年代不可静默删除" },
-  { id: "want", act: "ACT I", title: "想把私人记忆留下来", status: "grounded", confidence: 89, evidence: "interview_03.mp4 · 05:02–05:31", context: "保留个人愿望与公共记录之间的联系" },
-  { id: "friction", act: "ACT II", title: "拍摄遭遇现实阻力", status: "partial", confidence: 68, evidence: "interview_03.mp4 · 07:16–07:49", context: "当前只有口述，不能剪成已经被画面证实" },
-  { id: "choice", act: "ACT II", title: "决定从早市开始记录", status: "grounded", confidence: 86, evidence: "market_broll_02.mp4 · 00:28–01:34", context: "行动发生在受访后第二天" },
-  { id: "turn", act: "ACT II", title: "旧照片进入现实空间", status: "partial", confidence: 73, evidence: "old_photos_closeup.mov · 01:10–01:45", context: "需要补足主人公如何找到拍摄位置" },
-  { id: "peak", act: "ACT III", title: "记忆得到他人的回应", status: "missing", confidence: 34, evidence: "尚无另一人物视角", context: "不可用旁白代替被记录者的真实回应" },
-  { id: "resolution", act: "ACT III", title: "留下影像，也重新理解故乡", status: "grounded", confidence: 88, evidence: "interview_03.mp4 · 11:26–12:06", context: "结尾必须回应开场问题" },
+  { id: "hook", act: "ACT I", title: "A familiar place is seen anew", status: "grounded", confidence: 94, evidence: "interview_03.mp4 · 03:12–03:38", context: "Keep the time context of leaving and returning home" },
+  { id: "character", act: "ACT I", title: "The protagonist's history with home", status: "grounded", confidence: 91, evidence: "old_photos_closeup.mov · 00:44–01:06", context: "Do not silently remove the photograph's source or date" },
+  { id: "want", act: "ACT I", title: "A desire to preserve private memory", status: "grounded", confidence: 89, evidence: "interview_03.mp4 · 05:02–05:31", context: "Preserve the link between personal desire and public record" },
+  { id: "friction", act: "ACT II", title: "Filming meets real-world resistance", status: "partial", confidence: 68, evidence: "interview_03.mp4 · 07:16–07:49", context: "Currently supported only by testimony; do not edit it as visually verified" },
+  { id: "choice", act: "ACT II", title: "A decision to begin at the morning market", status: "grounded", confidence: 86, evidence: "market_broll_02.mp4 · 00:28–01:34", context: "The action occurs the day after the interview" },
+  { id: "turn", act: "ACT II", title: "Old photographs enter the present-day space", status: "partial", confidence: 73, evidence: "old_photos_closeup.mov · 01:10–01:45", context: "Needs evidence of how the protagonist located the filming position" },
+  { id: "peak", act: "ACT III", title: "Memory receives a response from others", status: "missing", confidence: 34, evidence: "No second character perspective yet", context: "Narration cannot replace the subject's real response" },
+  { id: "resolution", act: "ACT III", title: "Leaving an image—and rethinking home", status: "grounded", confidence: 88, evidence: "interview_03.mp4 · 11:26–12:06", context: "The ending must answer the opening question" },
 ];
 
 const arcVariantOptions: Array<{
@@ -637,17 +637,17 @@ const arcVariantOptions: Array<{
   actual: string;
   aspect: string;
   retained: number;
-  risk: "低" | "中" | "高";
+  risk: "Low" | "Medium" | "High";
   description: string;
   removed: string;
   mitigation: string;
 }> = [
-  { id: "doc20", label: "纪录长版", target: "20:00", actual: "18:42", aspect: "16:9", retained: 8, risk: "低", description: "保留八个母版节点与完整因果关系，适合作为纪录片主版本继续人工精剪。", removed: "仅压缩重复表达与无叙事功能的停顿。", mitigation: "逐条核对事实、授权与时间码后进入精剪。" },
-  { id: "short5", label: "短纪录版", target: "05:00", actual: "04:51", aspect: "16:9", retained: 6, risk: "中", description: "压缩人物背景，保留愿望、阻力、选择和结果四段核心因果。", removed: "删去部分童年经历与早市空间背景。", mitigation: "用 12 秒字幕卡补足地点与时间信息。" },
-  { id: "social90", label: "社媒版", target: "01:30", actual: "01:27", aspect: "16:9", retained: 4, risk: "高", description: "以人物钩子、冲突和行动高点为主，适合社交平台横屏分发。", removed: "动机形成过程与另一视角几乎全部被压缩。", mitigation: "结尾保留原片入口，并避免使用结论式标题。" },
-  { id: "trailer30", label: "预告片", target: "00:30", actual: "00:29", aspect: "16:9", retained: 3, risk: "中", description: "建立问题和情绪承诺，不提前假装解决故事中的核心冲突。", removed: "不呈现完整结果，仅留下行动悬念。", mitigation: "文案明确标注为预告，并链接完整版本。" },
-  { id: "vertical90", label: "竖屏版", target: "01:30", actual: "01:26", aspect: "9:16", retained: 4, risk: "高", description: "沿用 90 秒结构，并标记可能裁掉关键人物关系的横转竖镜头。", removed: "部分环境信息因画幅变化被弱化。", mitigation: "问题镜头采用留黑而非静默裁切证据。" },
-  { id: "multilingual", label: "多语字幕版", target: "05:00", actual: "04:51", aspect: "16:9 · EN", retained: 6, risk: "中", description: "使用同一短纪录结构，并生成带时间码的英文字幕审校轨。", removed: "沿用 5 分钟版的背景压缩策略。", mitigation: "保留专名表与逐条回译检查。" },
+  { id: "doc20", label: "Long Documentary", target: "20:00", actual: "18:42", aspect: "16:9", retained: 8, risk: "Low", description: "Retains all eight canonical nodes and the full causal chain, ready for a human editor to refine as the main documentary cut.", removed: "Only repeated statements and pauses without narrative function are compressed.", mitigation: "Verify facts, permissions, and timecodes item by item before fine editing." },
+  { id: "short5", label: "Short Documentary", target: "05:00", actual: "04:51", aspect: "16:9", retained: 6, risk: "Medium", description: "Compresses character background while retaining the core chain of desire, friction, choice, and outcome.", removed: "Removes part of the childhood history and morning-market context.", mitigation: "Use a 12-second title card to restore location and time context." },
+  { id: "social90", label: "Social Cut", target: "01:30", actual: "01:27", aspect: "16:9", retained: 4, risk: "High", description: "Prioritizes the character hook, conflict, and action peak for horizontal social distribution.", removed: "Compresses nearly all of the motivation-building and second perspective.", mitigation: "Keep a link to the full film at the end and avoid a conclusive headline." },
+  { id: "trailer30", label: "Trailer", target: "00:30", actual: "00:29", aspect: "16:9", retained: 3, risk: "Medium", description: "Establishes a question and an emotional promise without pretending the core conflict is already resolved.", removed: "Withholds the full outcome and leaves an action-driven question.", mitigation: "Label the copy clearly as a trailer and link the full version." },
+  { id: "vertical90", label: "Vertical Cut", target: "01:30", actual: "01:26", aspect: "9:16", retained: 4, risk: "High", description: "Uses the 90-second structure and flags horizontal-to-vertical crops that may remove key relationships.", removed: "Some environmental information is weakened by the aspect-ratio change.", mitigation: "Use letterboxing on problem shots rather than silently cropping evidence." },
+  { id: "multilingual", label: "Multilingual Subtitle Cut", target: "05:00", actual: "04:51", aspect: "16:9 · EN", retained: 6, risk: "Medium", description: "Uses the same short-documentary structure and generates a timecoded English subtitle review track.", removed: "Uses the same background-compression strategy as the five-minute cut.", mitigation: "Retain a proper-noun glossary and line-by-line back-translation checks." },
 ];
 
 const arcTimeline = [
@@ -667,19 +667,19 @@ const arcGaps: Array<{
   why: string;
   action: string;
 }> = [
-  { id: "visual-conflict", severity: "critical", category: "冲突可视化", title: "现实阻力只有口述，没有行动画面", evidence: "07:16 的采访提到被拒绝拍摄，但素材库没有对应现场。", why: "若直接使用旁白，观众只能被告知冲突，无法判断它真实如何发生。", action: "补拍主人公再次沟通拍摄许可的中景与反应镜头。" },
-  { id: "second-view", severity: "high", category: "人物视角", title: "缺少被记录者对项目的回应", evidence: "当前 19:32 素材全部来自主人公及其观察视角。", why: "单一视角会让结尾的公共意义缺少外部证据。", action: "补访谈一位早市摊主，询问旧照片是否改变其记忆。" },
-  { id: "bridge", severity: "high", category: "因果桥接", title: "旧照片如何进入早市现场没有交代", evidence: "01:45 后直接切到 market_broll_02，缺少寻找位置的过程。", why: "关键行动像是被剪辑强行连接，削弱人物选择。", action: "补拍对照照片、确认方位和步行进入现场的连续动作。" },
-  { id: "ending", severity: "medium", category: "首尾回应", title: "结尾回应了人物，却没有回到空间", evidence: "最后一句成立，但缺少与开场同机位的街道变化。", why: "空间是故事的第二主角，缺失会让结构闭环偏弱。", action: "在同一机位补拍傍晚空镜，形成视觉回环。" },
+  { id: "visual-conflict", severity: "critical", category: "Visualizing conflict", title: "Real-world friction is described but never shown", evidence: "The 07:16 interview mentions a refusal to be filmed, but the library contains no matching scene.", why: "If handled only with narration, viewers are told about the conflict but cannot see how it actually unfolded.", action: "Film a medium shot and reactions as the protagonist asks for permission again." },
+  { id: "second-view", severity: "high", category: "Character perspective", title: "No response from the people being documented", evidence: "All 19:32 of current footage comes from the protagonist and their observational perspective.", why: "A single perspective leaves the ending's public significance without external evidence.", action: "Interview a market vendor about whether the old photograph changed their memory." },
+  { id: "bridge", severity: "high", category: "Causal bridge", title: "No bridge showing how the photographs reach the market", evidence: "The cut jumps to market_broll_02 after 01:45 without showing the search for the location.", why: "The key action feels forced together in the edit, weakening the character's choice.", action: "Film the continuous action of comparing photographs, locating the position, and walking into the site." },
+  { id: "ending", severity: "medium", category: "Opening–ending return", title: "The ending resolves the character but not the place", evidence: "The final line works, but there is no matching street view from the opening position.", why: "Place is the story's second protagonist; omitting it weakens structural closure.", action: "Capture an evening establishing shot from the same position to create a visual return." },
 ];
 
 const arcAgentTrace = [
-  { tool: "media.index", label: "读取媒体证据", detail: "FFmpeg 建立时长、画幅、音频和代表帧索引。" },
-  { tool: "audio.transcribe", label: "建立对白证据", detail: "FunASR 生成带时间码转写并关联原始素材。" },
-  { tool: "vision.observe", label: "描述可见行动", detail: "Qwen3-VL 只记录关键帧中可直接观察到的人物、动作和场景。" },
-  { tool: "evidence.search", label: "检索叙事证据", detail: "Agent 按故事假设检索对白、画面与时间码。" },
-  { tool: "story.compile", label: "编译六个版本", detail: "确定性 Story Compiler 生成时间线与语境删减账本。" },
-  { tool: "gap.audit", label: "审校故事缺口", detail: "Gap Radar 把缺口转换为可执行的补拍和补访谈任务。" },
+  { tool: "media.index", label: "Read media evidence", detail: "FFmpeg indexes duration, aspect ratio, audio, and representative frames." },
+  { tool: "audio.transcribe", label: "Build dialogue evidence", detail: "FunASR generates timecoded transcripts linked to the source footage." },
+  { tool: "vision.observe", label: "Describe visible action", detail: "Qwen3-VL records only directly observable people, actions, and settings in keyframes." },
+  { tool: "evidence.search", label: "Retrieve narrative evidence", detail: "The agent retrieves dialogue, visuals, and timecodes against the story hypothesis." },
+  { tool: "story.compile", label: "Compile six cuts", detail: "A deterministic Story Compiler generates timelines and the contextual-cut ledger." },
+  { tool: "gap.audit", label: "Audit story gaps", detail: "Gap Radar converts gaps into actionable pickup and interview tasks." },
 ];
 
 function ArcDemo() {
@@ -691,7 +691,7 @@ function ArcDemo() {
   const [completedTasks, setCompletedTasks] = useState<string[]>([]);
   const [runState, setRunState] = useState<"idle" | "running" | "done">("done");
   const [traceStep, setTraceStep] = useState(arcAgentTrace.length);
-  const [hypothesis, setHypothesis] = useState("一个年轻人通过重拍故乡，重新理解自己为何选择留下。 ");
+  const [hypothesis, setHypothesis] = useState("A young person re-films their hometown and comes to understand why they chose to stay. ");
   const [customAsset, setCustomAsset] = useState<{ id: string; name: string; time: string; meta: string; state: string; cue: string; quote: string; kind: string } | null>(null);
   const [exported, setExported] = useState("");
 
@@ -739,10 +739,10 @@ function ArcDemo() {
   };
 
   const workspaceLabels: Array<[ArcWorkspace, string, string]> = [
-    ["source", "01", "素材与转写"],
+    ["source", "01", "Footage & Transcripts"],
     ["compiler", "02", "Story Compiler"],
     ["radar", "03", "Gap Radar"],
-    ["agent", "04", "Agent 运行记录"],
+    ["agent", "04", "Agent Run Log"],
   ];
 
   return (
@@ -755,8 +755,8 @@ function ArcDemo() {
 
       <div className="arc-demo-body">
         <aside className="arc-demo-sidebar">
-          <span className="arc-sidebar-label">工作台</span>
-          <nav aria-label="ArcProof 演示工作台">
+          <span className="arc-sidebar-label">Workspace</span>
+          <nav aria-label="ArcProof demo workspace">
             {workspaceLabels.map(([id, index, label]) => (
               <button type="button" className={workspace === id ? "active" : ""} onClick={() => setWorkspace(id)} key={id}>
                 <span>{index}</span><b>{label}</b><em>{id === "source" ? assets.length : id === "compiler" ? 6 : id === "radar" ? arcGaps.length : traceStep}</em>
@@ -764,19 +764,19 @@ function ArcDemo() {
             ))}
           </nav>
           <div className="arc-sidebar-stats">
-            <span>当前项目</span>
-            <p><b>{assets.length} 个素材</b><small>19:32 原始时长</small></p>
-            <p><b>8 / 8</b><small>母版节点已建立</small></p>
-            <p><b>4</b><small>待处理叙事缺口</small></p>
+            <span>Current Project</span>
+            <p><b>{assets.length}  assets</b><small>19:32 raw duration</small></p>
+            <p><b>8 / 8</b><small>canonical nodes built</small></p>
+            <p><b>4</b><small>story gaps to resolve</small></p>
           </div>
-          <div className="arc-sidebar-principle"><b>Canonical first.</b><p>所有版本都从同一母版故事编译，并记录被删掉的语境。</p></div>
+          <div className="arc-sidebar-principle"><b>Canonical first.</b><p>Every cut is compiled from the same canonical story, with removed context recorded.</p></div>
         </aside>
 
         <section className="arc-demo-workspace" aria-live="polite">
           {runState === "running" && (
             <div className="arc-run-strip">
               <span><i style={{ width: `${Math.max(8, (traceStep / arcAgentTrace.length) * 100)}%` }} /></span>
-              <p><b>Agent 正在调用工具</b>{arcAgentTrace[Math.min(traceStep, arcAgentTrace.length - 1)]?.label}</p>
+              <p><b>Agent is calling tools</b>{arcAgentTrace[Math.min(traceStep, arcAgentTrace.length - 1)]?.label}</p>
               <em>{traceStep}/{arcAgentTrace.length}</em>
             </div>
           )}
@@ -784,14 +784,14 @@ function ArcDemo() {
           {workspace === "source" && (
             <div className="arc-source-workspace">
               <div className="arc-workspace-hero">
-                <div><span>CANONICAL STORY SYSTEM</span><h4>先读懂证据，再决定剪成什么。</h4><p>原片、转写和画面观察都保留时间码，故事结论可以回到源素材核查。</p></div>
-                <button type="button" onClick={runAgent} disabled={runState === "running"}>{runState === "running" ? "分析中…" : "运行 ArcProof Agent"} <Arrow /></button>
+                <div><span>CANONICAL STORY SYSTEM</span><h4>Understand the evidence before deciding what to cut.</h4><p>Footage, transcripts, and visual observations retain timecodes so every story claim can be checked against the source.</p></div>
+                <button type="button" onClick={runAgent} disabled={runState === "running"}>{runState === "running" ? "Analyzing…" : "Run ArcProof Agent"} <Arrow /></button>
               </div>
-              <label className="arc-hypothesis">要验证的故事假设<textarea value={hypothesis} onChange={(event) => setHypothesis(event.target.value)} /></label>
-              <div className="arc-metric-strip"><span><b>19:32</b>源素材</span><span><b>100%</b>转写覆盖</span><span><b>36</b>画面观察</span><span><b>LOCAL</b>原片不出本机</span></div>
+              <label className="arc-hypothesis">Story hypothesis to test<textarea value={hypothesis} onChange={(event) => setHypothesis(event.target.value)} /></label>
+              <div className="arc-metric-strip"><span><b>19:32</b>Source footage</span><span><b>100%</b>Transcript coverage</span><span><b>36</b>Visual observations</span><span><b>LOCAL</b>Footage stays local</span></div>
               <div className="arc-source-grid">
                 <section className="arc-asset-panel">
-                  <div className="arc-panel-heading"><div><span>SOURCE INDEX</span><h5>素材与证据入口</h5></div><label htmlFor="arc-demo-upload">＋ 添加代理文件</label></div>
+                  <div className="arc-panel-heading"><div><span>SOURCE INDEX</span><h5>Footage & evidence intake</h5></div><label htmlFor="arc-demo-upload">+ Add proxy file</label></div>
                   <input
                     className="visually-hidden"
                     id="arc-demo-upload"
@@ -800,7 +800,7 @@ function ArcDemo() {
                     onChange={(event) => {
                       const file = event.target.files?.[0];
                       if (!file) return;
-                      const next = { id: "custom", name: file.name, time: "待分析", meta: `${(file.size / 1024 / 1024).toFixed(1)} MB · 本地预览`, state: "待建立索引", cue: "—", quote: "文件只在当前浏览器中显示；此作品集不会上传或分析原片。", kind: "自选素材" };
+                      const next = { id: "custom", name: file.name, time: "Awaiting analysis", meta: `${(file.size / 1024 / 1024).toFixed(1)} MB · Local preview`, state: "Awaiting index", cue: "—", quote: "The file is displayed only in this browser; the portfolio neither uploads nor analyzes source footage.", kind: "User-selected asset" };
                       setCustomAsset(next);
                       setSelectedAssetId(next.id);
                     }}
@@ -819,7 +819,7 @@ function ArcDemo() {
                   <div className="arc-panel-heading"><div><span>TRANSCRIPT EVIDENCE</span><h5>{selectedAsset.name}</h5></div><em>{selectedAsset.kind}</em></div>
                   <div className="arc-evidence-quote"><time>{selectedAsset.cue}</time><p>{selectedAsset.quote}</p></div>
                   <div className="arc-frame-row"><i /><i /><i /></div>
-                  <p className="arc-data-boundary"><b>数据边界</b>视频、音频、关键帧与向量保留在本机；Agent 只读取检索后的结构化文本证据。</p>
+                  <p className="arc-data-boundary"><b>Data boundary</b>Video, audio, keyframes, and vectors remain local; the agent reads only retrieved structured text evidence.</p>
                 </section>
               </div>
             </div>
@@ -828,28 +828,28 @@ function ArcDemo() {
           {workspace === "compiler" && (
             <div className="arc-compiler-workspace">
               <div className="arc-workspace-hero compact">
-                <div><span>CANONICAL STORY SPINE</span><h4>一个母版故事，六个可追溯版本。</h4><p>母版节点是证据合同。删去任何关键语境，都会进入 Removed Context Ledger。</p></div>
-                <span className="arc-result-mode">✓ AGENT 审校完成</span>
+                <div><span>CANONICAL STORY SPINE</span><h4>One canonical story. Six traceable cuts.</h4><p>Canonical nodes are evidence contracts. Removing any key context creates an entry in the Removed Context Ledger.</p></div>
+                <span className="arc-result-mode">✓ AGENT AUDIT COMPLETE</span>
               </div>
-              <div className="arc-spine-board" aria-label="八个母版叙事节点">
+              <div className="arc-spine-board" aria-label="Eight canonical story nodes">
                 {arcStoryNodes.map((node, index) => (
                   <article className={node.status} key={node.id}>
-                    <div><span>{String(index + 1).padStart(2, "0")} · {node.act}</span><em>{node.status === "grounded" ? "证据充分" : node.status === "partial" ? "部分成立" : "存在缺口"}</em></div>
+                    <div><span>{String(index + 1).padStart(2, "0")} · {node.act}</span><em>{node.status === "grounded" ? "Grounded" : node.status === "partial" ? "Partially grounded" : "Missing evidence"}</em></div>
                     <h5>{node.title}</h5>
                     <p>{node.evidence}</p>
                     <small>{node.confidence}% confidence</small>
                     <button type="button" className={lockedNodes.includes(node.id) ? "locked" : ""} onClick={() => setLockedNodes((current) => current.includes(node.id) ? current.filter((id) => id !== node.id) : [...current, node.id])}>
-                      {lockedNodes.includes(node.id) ? "语境已锁定" : "锁定语境"}
+                      {lockedNodes.includes(node.id) ? "Context locked" : "Lock context"}
                     </button>
                   </article>
                 ))}
               </div>
               <section className="arc-variant-section">
-                <div className="arc-panel-heading"><div><span>STORY COMPILER OUTPUT</span><h5>六个目标版本</h5></div><em>从同一母版编译</em></div>
-                <div className="arc-variant-tabs" role="tablist" aria-label="成片版本">
+                <div className="arc-panel-heading"><div><span>STORY COMPILER OUTPUT</span><h5>Six target cuts</h5></div><em>Compiled from one canonical story</em></div>
+                <div className="arc-variant-tabs" role="tablist" aria-label="Output cuts">
                   {arcVariantOptions.map((variant) => (
                     <button type="button" role="tab" aria-selected={variantId === variant.id} className={variantId === variant.id ? "active" : ""} onClick={() => { setVariantId(variant.id); setExported(""); }} key={variant.id}>
-                      <b>{variant.label}</b><span>{variant.actual} / {variant.target}</span><em className={`risk-${variant.risk}`}>{variant.aspect} · {variant.risk}风险</em>
+                      <b>{variant.label}</b><span>{variant.actual} / {variant.target}</span><em className={`risk-${variant.risk.toLowerCase()}`}>{variant.aspect} · {variant.risk} risk</em>
                     </button>
                   ))}
                 </div>
@@ -858,18 +858,18 @@ function ArcDemo() {
                     <span>{selectedVariant.id.toUpperCase()} · {selectedVariant.aspect}</span>
                     <h5>{selectedVariant.label}</h5>
                     <p>{selectedVariant.description}</p>
-                    <dl><div><dt>可生成时长</dt><dd>{selectedVariant.actual}</dd></div><div><dt>保留节点</dt><dd>{selectedVariant.retained} / 8</dd></div><div><dt>语境风险</dt><dd>{selectedVariant.risk}</dd></div></dl>
-                    <div className={`arc-risk-callout risk-${selectedVariant.risk}`}><b>Removed Context Ledger</b><p>{selectedVariant.removed}</p><small>{selectedVariant.mitigation}</small></div>
+                    <dl><div><dt>Generated duration</dt><dd>{selectedVariant.actual}</dd></div><div><dt>Nodes retained</dt><dd>{selectedVariant.retained} / 8</dd></div><div><dt>Context risk</dt><dd>{selectedVariant.risk}</dd></div></dl>
+                    <div className={`arc-risk-callout risk-${selectedVariant.risk.toLowerCase()}`}><b>Removed Context Ledger</b><p>{selectedVariant.removed}</p><small>{selectedVariant.mitigation}</small></div>
                     <div className="arc-export-row">
-                      {(["EDL", "JSON", "SRT"] as const).map((kind) => <button type="button" onClick={() => downloadArtifact(kind)} key={kind}>导出 {kind}</button>)}
-                      <span>{exported ? `${exported} 已生成` : "可交付到剪辑工作流"}</span>
+                      {(["EDL", "JSON", "SRT"] as const).map((kind) => <button type="button" onClick={() => downloadArtifact(kind)} key={kind}>Export {kind}</button>)}
+                      <span>{exported ? `${exported} generated` : "Ready for the editing workflow"}</span>
                     </div>
                   </div>
                   <div className="arc-timeline-panel">
-                    <div className="arc-panel-heading"><div><span>EDIT DECISION LIST</span><h5>编译时间线</h5></div><em>{Math.min(selectedVariant.retained, arcTimeline.length)} clips</em></div>
+                    <div className="arc-panel-heading"><div><span>EDIT DECISION LIST</span><h5>Compiled timeline</h5></div><em>{Math.min(selectedVariant.retained, arcTimeline.length)} clips</em></div>
                     <div className="arc-timeline-list">
                       {arcTimeline.slice(0, Math.min(selectedVariant.retained, arcTimeline.length)).map((item, index) => (
-                        <article key={item.role}><span>{String(index + 1).padStart(2, "0")}</span><div><i style={{ width: item.width }} /><b>{item.role}</b><small>{item.file} · 源 {item.source} · 成片 {item.record}</small></div></article>
+                        <article key={item.role}><span>{String(index + 1).padStart(2, "0")}</span><div><i style={{ width: item.width }} /><b>{item.role}</b><small>{item.file} · Source {item.source} · Cut {item.record}</small></div></article>
                       ))}
                     </div>
                   </div>
@@ -881,19 +881,19 @@ function ArcDemo() {
           {workspace === "radar" && (
             <div className="arc-radar-workspace">
               <div className="arc-workspace-hero compact">
-                <div><span>STORY GAP RADAR</span><h4>把“故事还缺什么”变成可执行任务。</h4><p>每个缺口都绑定素材证据、影响节点、补拍动作与完成标准。</p></div>
-                <div className="arc-radar-score"><b>3</b><span>项高优先级</span><small>{completedTasks.length}/{arcGaps.length} 已完成</small></div>
+                <div><span>STORY GAP RADAR</span><h4>Turn what the story still needs into actionable tasks.</h4><p>Each gap is linked to footage evidence, affected nodes, a pickup action, and completion criteria.</p></div>
+                <div className="arc-radar-score"><b>3</b><span> high-priority gaps</span><small>{completedTasks.length}/{arcGaps.length} complete</small></div>
               </div>
               <div className="arc-gap-controls">
-                <div>{(["all", "critical", "high", "medium"] as const).map((filter) => <button type="button" className={gapFilter === filter ? "active" : ""} onClick={() => setGapFilter(filter)} key={filter}>{filter === "all" ? `全部 ${arcGaps.length}` : filter === "critical" ? "关键" : filter === "high" ? "高" : "中"}</button>)}</div>
-                <button type="button" onClick={() => downloadArtifact("CSV")}>导出补拍计划 CSV</button>
+                <div>{(["all", "critical", "high", "medium"] as const).map((filter) => <button type="button" className={gapFilter === filter ? "active" : ""} onClick={() => setGapFilter(filter)} key={filter}>{filter === "all" ? `All ${arcGaps.length}` : filter === "critical" ? "Critical" : filter === "high" ? "High" : "Medium"}</button>)}</div>
+                <button type="button" onClick={() => downloadArtifact("CSV")}>Export Pickup Plan CSV</button>
               </div>
               <div className="arc-gap-list">
                 {visibleGaps.map((gap, index) => (
                   <article className={gap.severity} key={gap.id}>
-                    <div className="arc-gap-rank"><span>{String(index + 1).padStart(2, "0")}</span><em>{gap.severity === "critical" ? "关键" : gap.severity === "high" ? "高" : "中"}优先级</em></div>
-                    <div className="arc-gap-copy"><span>{gap.category}</span><h5>{gap.title}</h5><div><p><b>素材证据</b>{gap.evidence}</p><p><b>为什么重要</b>{gap.why}</p><p><b>建议动作</b>{gap.action}</p></div></div>
-                    <button type="button" className={completedTasks.includes(gap.id) ? "done" : ""} onClick={() => setCompletedTasks((current) => current.includes(gap.id) ? current.filter((id) => id !== gap.id) : [...current, gap.id])}>{completedTasks.includes(gap.id) ? "✓ 已补拍" : "标记已补拍"}</button>
+                    <div className="arc-gap-rank"><span>{String(index + 1).padStart(2, "0")}</span><em>{gap.severity === "critical" ? "Critical" : gap.severity === "high" ? "High" : "Medium"} priority</em></div>
+                    <div className="arc-gap-copy"><span>{gap.category}</span><h5>{gap.title}</h5><div><p><b>Footage evidence</b>{gap.evidence}</p><p><b>Why it matters</b>{gap.why}</p><p><b>Recommended action</b>{gap.action}</p></div></div>
+                    <button type="button" className={completedTasks.includes(gap.id) ? "done" : ""} onClick={() => setCompletedTasks((current) => current.includes(gap.id) ? current.filter((id) => id !== gap.id) : [...current, gap.id])}>{completedTasks.includes(gap.id) ? "✓ Picked up" : "Mark as picked up"}</button>
                   </article>
                 ))}
               </div>
@@ -903,24 +903,24 @@ function ArcDemo() {
           {workspace === "agent" && (
             <div className="arc-agent-workspace">
               <div className="arc-workspace-hero compact">
-                <div><span>AGENT EXECUTION</span><h4>每一步都能核查，不用假进度条包装。</h4><p>DeepSeek 负责调用证据工具，确定性编译器负责版本结构、语境账本和可交付文件。</p></div>
-                <button type="button" onClick={runAgent} disabled={runState === "running"}>{runState === "running" ? "运行中…" : "重新运行 Agent"}</button>
+                <div><span>AGENT EXECUTION</span><h4>Every step is auditable—no fake progress bars.</h4><p>DeepSeek calls evidence tools, while a deterministic compiler owns cut structure, the context ledger, and deliverable files.</p></div>
+                <button type="button" onClick={runAgent} disabled={runState === "running"}>{runState === "running" ? "Running…" : "Run Agent Again"}</button>
               </div>
               <div className="arc-agent-grid">
                 <section className="arc-trace-panel">
-                  <div className="arc-panel-heading"><div><span>RUN TRACE</span><h5>本次运行</h5></div><em>{traceStep} events</em></div>
+                  <div className="arc-panel-heading"><div><span>RUN TRACE</span><h5>This run</h5></div><em>{traceStep} events</em></div>
                   {arcAgentTrace.map((step, index) => {
                     const status = index < traceStep ? "done" : index === traceStep && runState === "running" ? "running" : "pending";
                     return <article className={status} key={step.tool}><span>{status === "done" ? "✓" : status === "running" ? "…" : "—"}</span><div><b>{step.label}</b><code>{step.tool}</code><p>{step.detail}</p></div></article>;
                   })}
                 </section>
                 <section className="arc-interface-panel">
-                  <div className="arc-panel-heading"><div><span>IMPLEMENTED INTERFACES</span><h5>真实技术与交付边界</h5></div><em>LOCAL-FIRST</em></div>
-                  <article><span>LOCAL</span><div><b>FFmpeg + FunASR</b><p>媒体索引、音频抽取、带时间码转写。</p></div></article>
-                  <article><span>LOCAL</span><div><b>Qwen3-VL + Embedding</b><p>可见画面描述与本地证据向量检索。</p></div></article>
-                  <article><span>AGENT</span><div><b>DeepSeek Tool Calls</b><p>检索证据、审校母版、发现语境与故事缺口。</p></div></article>
-                  <article><span>OUTPUT</span><div><b>EDL · SRT · CSV · JSON · MP4</b><p>把分析结果带回真实剪辑与补拍流程。</p></div></article>
-                  <div className="arc-interface-note"><b>原片不出本机</b><p>发送给 Agent 的是结构化文本证据，不是完整视频、音频或关键帧。</p></div>
+                  <div className="arc-panel-heading"><div><span>IMPLEMENTED INTERFACES</span><h5>Implemented technology & delivery boundaries</h5></div><em>LOCAL-FIRST</em></div>
+                  <article><span>LOCAL</span><div><b>FFmpeg + FunASR</b><p>Media indexing, audio extraction, and timecoded transcription.</p></div></article>
+                  <article><span>LOCAL</span><div><b>Qwen3-VL + Embedding</b><p>Visible-action descriptions and local vector retrieval.</p></div></article>
+                  <article><span>AGENT</span><div><b>DeepSeek Tool Calls</b><p>Evidence retrieval, canonical-story audit, and context/story-gap detection.</p></div></article>
+                  <article><span>OUTPUT</span><div><b>EDL · SRT · CSV · JSON · MP4</b><p>Return analysis to real editing and pickup workflows.</p></div></article>
+                  <div className="arc-interface-note"><b>Footage stays local</b><p>The agent receives structured text evidence—not complete video, audio, or keyframes.</p></div>
                 </section>
               </div>
             </div>
@@ -952,62 +952,62 @@ const roomStyleOptions: Array<{
 }> = [
   {
     id: "mist",
-    name: "雾蓝原木",
-    caption: "清爽、显亮，也能中和深色家具",
+    name: "Mist Blue & Natural Wood",
+    caption: "Airy and bright, balancing dark furniture",
     match: 89,
     palette: ["#90b7ce", "#c8aa89", "#f5f2eb"],
     reasoning:
-      "用浅色织物提亮采光，以低饱和雾蓝降低深色家具的压迫感，再用少量原木色把冷暖关系拉回平衡。",
+      "Light textiles brighten the room, muted mist blue softens the weight of dark furniture, and natural wood brings the cool–warm balance back into place.",
     products: [
-      { id: "mist-lamp", name: "暖光落地灯", keyword: "原木落地灯 租房 暖光", price: 159, icon: "shop-lamp" },
-      { id: "mist-curtain", name: "雾蓝遮光窗帘", keyword: "免打孔 雾蓝 遮光窗帘", price: 129, icon: "shop-curtain" },
-      { id: "mist-rug", name: "浅灰短绒地毯", keyword: "可机洗 浅灰 短绒地毯", price: 199, icon: "shop-rug" },
-      { id: "mist-cushion", name: "蓝灰靠垫组合", keyword: "蓝灰 靠垫套 45x45", price: 88, icon: "shop-cushion" },
+      { id: "mist-lamp", name: "Warm floor lamp", keyword: "原木落地灯 租房 暖光", price: 159, icon: "shop-lamp" },
+      { id: "mist-curtain", name: "Mist-blue blackout curtains", keyword: "免打孔 雾蓝 遮光窗帘", price: 129, icon: "shop-curtain" },
+      { id: "mist-rug", name: "Light-grey low-pile rug", keyword: "可机洗 浅灰 短绒地毯", price: 199, icon: "shop-rug" },
+      { id: "mist-cushion", name: "Blue-grey cushion set", keyword: "蓝灰 靠垫套 45x45", price: 88, icon: "shop-cushion" },
     ],
   },
   {
     id: "cream",
-    name: "奶油侘寂",
-    caption: "柔和、松弛，适合弱采光小空间",
+    name: "Cream Wabi-sabi",
+    caption: "Soft and relaxed for a compact, low-light room",
     match: 84,
     palette: ["#e8dcc8", "#c8b59d", "#f7f1e8"],
     reasoning:
-      "用同色系奶油白减少视觉切割，藤编与亚麻材质增加层次；整体保持轻量，不遮挡窗边的自然光。",
+      "Tonal cream reduces visual fragmentation, while rattan and linen add depth. Every piece stays light enough to preserve natural light near the window.",
     products: [
-      { id: "cream-lamp", name: "纸艺落地灯", keyword: "纸艺落地灯 奶油风 暖光", price: 189, icon: "shop-lamp" },
-      { id: "cream-curtain", name: "米白亚麻窗帘", keyword: "免打孔 米白 亚麻窗帘", price: 149, icon: "shop-curtain cream" },
-      { id: "cream-rug", name: "燕麦色圈绒地毯", keyword: "燕麦色 圈绒地毯 可水洗", price: 229, icon: "shop-rug cream" },
-      { id: "cream-basket", name: "藤编收纳篮", keyword: "藤编收纳篮 带盖 小户型", price: 79, icon: "shop-basket" },
+      { id: "cream-lamp", name: "Paper floor lamp", keyword: "纸艺落地灯 奶油风 暖光", price: 189, icon: "shop-lamp" },
+      { id: "cream-curtain", name: "Ivory linen curtains", keyword: "免打孔 米白 亚麻窗帘", price: 149, icon: "shop-curtain cream" },
+      { id: "cream-rug", name: "Oatmeal loop-pile rug", keyword: "燕麦色 圈绒地毯 可水洗", price: 229, icon: "shop-rug cream" },
+      { id: "cream-basket", name: "Rattan storage basket", keyword: "藤编收纳篮 带盖 小户型", price: 79, icon: "shop-basket" },
     ],
   },
   {
     id: "retro",
-    name: "复古暖棕",
-    caption: "保留旧家具质感，增加电影感氛围",
+    name: "Warm Retro Brown",
+    caption: "Keeps the character of old furniture and adds a cinematic mood",
     match: 78,
     palette: ["#a66f58", "#c9a66b", "#465a68"],
     reasoning:
-      "不回避原有深色家具，而是用焦糖棕、黄铜与深蓝做统一，让旧家具从“沉重”变成有意选择的复古基调。",
+      "Instead of hiding the dark furniture, caramel brown, brass, and deep blue unite it into a deliberate retro foundation.",
     products: [
-      { id: "retro-lamp", name: "黄铜阅读灯", keyword: "黄铜阅读灯 复古 租房", price: 219, icon: "shop-lamp retro" },
-      { id: "retro-curtain", name: "焦糖棕窗帘", keyword: "免打孔 焦糖棕 窗帘", price: 169, icon: "shop-curtain retro" },
-      { id: "retro-rug", name: "几何复古地毯", keyword: "复古 几何地毯 小户型", price: 269, icon: "shop-rug retro" },
-      { id: "retro-frame", name: "胡桃木色画框", keyword: "胡桃木色 画框 免钉", price: 96, icon: "shop-frame" },
+      { id: "retro-lamp", name: "Brass reading lamp", keyword: "黄铜阅读灯 复古 租房", price: 219, icon: "shop-lamp retro" },
+      { id: "retro-curtain", name: "Caramel-brown curtains", keyword: "免打孔 焦糖棕 窗帘", price: 169, icon: "shop-curtain retro" },
+      { id: "retro-rug", name: "Geometric retro rug", keyword: "复古 几何地毯 小户型", price: 269, icon: "shop-rug retro" },
+      { id: "retro-frame", name: "Walnut-finish frame", keyword: "胡桃木色 画框 免钉", price: 96, icon: "shop-frame" },
     ],
   },
 ];
 
 const roomSignals = [
-  { icon: "☀", label: "自然采光", value: "中等偏弱", confidence: "72%" },
-  { icon: "◫", label: "可用面积", value: "约 11㎡", confidence: "78%" },
-  { icon: "◒", label: "主体色温", value: "冷灰中性", confidence: "86%" },
-  { icon: "▥", label: "固定家具", value: "深色木纹", confidence: "84%" },
+  { icon: "☀", label: "Natural light", value: "Moderate to low", confidence: "72%" },
+  { icon: "◫", label: "Usable area", value: "About 11 m²", confidence: "78%" },
+  { icon: "◒", label: "Dominant temperature", value: "Neutral cool grey", confidence: "86%" },
+  { icon: "▥", label: "Fixed furniture", value: "Dark wood grain", confidence: "84%" },
 ];
 
 const constraintLabels: Record<RoomConstraint, string> = {
-  noDrill: "免打孔",
-  movable: "搬家可带走",
-  compact: "小户型优先",
+  noDrill: "No drilling",
+  movable: "Move-friendly",
+  compact: "Small-space first",
 };
 
 function RoomDemo() {
@@ -1067,12 +1067,12 @@ function RoomDemo() {
 
   const copyShoppingList = async () => {
     const text = [
-      `RoomMood｜${activeStyle.name}软装采购搜索词`,
+      `RoomMood｜${activeStyle.name} styling search terms`,
       ...selectedProducts.map(
-        (product, index) => `${index + 1}. ${product.name}｜${product.keyword}｜参考价 ¥${product.price}`
+        (product, index) => `${index + 1}. ${product.name}｜${product.keyword}｜Reference price ¥${product.price}`
       ),
-      `合计参考价：¥${selectedTotal}`,
-      "说明：商品与价格为 Demo 示例，未连接淘宝实时数据。",
+      `Total reference price: ¥${selectedTotal}`,
+      "Note: Products and prices are demo examples and are not connected to live Taobao data.",
     ].join("\n");
 
     try {
@@ -1095,22 +1095,22 @@ function RoomDemo() {
     <div className="demo-layout room-demo">
       <div className="demo-panel room-upload-panel">
         <div className="room-panel-topline">
-          <span className="demo-kicker">01 / 空间输入</span>
+          <span className="demo-kicker">01 / ROOM INPUT</span>
           <span className="local-only-badge">LOCAL PREVIEW</span>
         </div>
         <div className={`room-photo-stage ${roomImage ? "has-photo" : ""} ${analysisState === "scanning" ? "is-scanning" : ""}`}>
           {roomImage ? (
             <>
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={roomImage} alt="用户选择的租房原始照片预览" />
+              <img src={roomImage} alt="Preview of the user's selected rental-room photo" />
             </>
           ) : (
-            <div className="room-scene-large" aria-label="样例出租房示意图" role="img">
+            <div className="room-scene-large" aria-label="Sample rental-room illustration" role="img">
               <i className="large-window" />
               <i className="large-bed" />
               <i className="large-desk" />
               <i className="large-floor" />
-              <span>样例原始房间</span>
+              <span>Sample original room</span>
             </div>
           )}
           {analyzed && previewMode === "palette" && (
@@ -1119,48 +1119,48 @@ function RoomDemo() {
               style={{
                 background: `linear-gradient(135deg, ${activeStyle.palette[0]}70, transparent 52%), linear-gradient(320deg, ${activeStyle.palette[1]}52, transparent 58%)`,
               }}
-              aria-label={`${activeStyle.name}配色氛围预览`}
+              aria-label={`${activeStyle.name}Palette mood preview`}
             >
-              <span>配色氛围预览 · 非效果图</span>
+              <span>Palette mood preview · Not a rendered makeover</span>
             </div>
           )}
           {analysisState === "scanning" && (
             <div className="scan-overlay" aria-live="polite">
               <i />
-              <span>正在识别采光、色温与固定家具…</span>
+              <span>Identifying light, color temperature, and fixed furniture…</span>
             </div>
           )}
-          <span className="local-photo-tag">照片不上传</span>
+          <span className="local-photo-tag">Photo stays local</span>
         </div>
 
-        <div className="room-stepper" aria-label="体验进度">
-          <span className="is-done"><b>01</b>上传照片</span>
-          <span className={analysisState !== "idle" ? "is-done" : ""}><b>02</b>空间诊断</span>
-          <span className={analyzed ? "is-done" : ""}><b>03</b>生成清单</span>
+        <div className="room-stepper" aria-label="Experience progress">
+          <span className="is-done"><b>01</b>Upload photo</span>
+          <span className={analysisState !== "idle" ? "is-done" : ""}><b>02</b>Room diagnosis</span>
+          <span className={analyzed ? "is-done" : ""}><b>03</b>Generate list</span>
         </div>
 
         {analyzed && (
-          <div className="preview-switcher" aria-label="照片预览模式">
+          <div className="preview-switcher" aria-label="Photo preview mode">
             <button
               type="button"
               className={previewMode === "original" ? "active" : ""}
               onClick={() => setPreviewMode("original")}
             >
-              原图
+              Original
             </button>
             <button
               type="button"
               className={previewMode === "palette" ? "active" : ""}
               onClick={() => setPreviewMode("palette")}
             >
-              配色氛围
+              Palette mood
             </button>
           </div>
         )}
 
         <div className="room-upload-actions">
           <label className="demo-secondary upload-label" htmlFor="room-photo-upload">
-            {roomImage ? "更换照片" : "选择照片"}
+            {roomImage ? "Change photo" : "Select a photo"}
           </label>
           <input
             id="room-photo-upload"
@@ -1185,12 +1185,12 @@ function RoomDemo() {
             }}
           >
             {analysisState === "scanning"
-              ? "正在分析…"
+              ? "Analyzing…"
               : analyzed
-                ? "重新分析"
+                ? "Analyze again"
                 : roomImage
-                  ? "分析我的房间"
-                  : "分析示例空间"} {analysisState !== "scanning" && <Arrow />}
+                  ? "Analyze my room"
+                  : "Analyze sample room"} {analysisState !== "scanning" && <Arrow />}
           </button>
         </div>
       </div>
@@ -1199,36 +1199,36 @@ function RoomDemo() {
         {analysisState === "idle" ? (
           <div className="empty-result">
             <span>⌂</span>
-            <p>选择租房原始照片，或直接分析示例空间，体验从诊断到采购清单的完整流程。</p>
+            <p>Choose an original rental-room photo—or analyze the sample—to experience the full journey from diagnosis to shopping list.</p>
           </div>
         ) : analysisState === "scanning" ? (
           <div className="room-loading-state" aria-live="polite">
             <div className="loading-orbit"><i /><i /><i /></div>
             <span className="demo-kicker">READING THE ROOM</span>
-            <h4>正在理解这个空间</h4>
-            <p>分析采光、面积、色温和不可移动家具，随后匹配更适合租住场景的软装方案。</p>
+            <h4>Understanding the space</h4>
+            <p>Analyzing light, area, color temperature, and immovable furniture before matching a renter-friendly styling plan.</p>
             <div className="loading-track"><span /></div>
           </div>
         ) : (
           <>
             <div className="room-result-heading">
               <div>
-                <span className="demo-kicker">02 / 推荐结果</span>
+                <span className="demo-kicker">02 / RECOMMENDATIONS</span>
                 <h4>{activeStyle.name}</h4>
               </div>
               <div>
                 <span className="match-score">{activeStyle.match}% MATCH</span>
-                <div className="room-palette-large" aria-label={`${activeStyle.name}推荐配色`}>
+                <div className="room-palette-large" aria-label={`${activeStyle.name}Recommended palette`}>
                   {activeStyle.palette.map((color) => <i key={color} style={{ background: color }} />)}
                 </div>
               </div>
             </div>
 
-            <div className="room-tabs" role="tablist" aria-label="软装方案详情">
+            <div className="room-tabs" role="tablist" aria-label="Styling-plan details">
               {([
-                ["analysis", "空间诊断"],
-                ["style", "风格方案"],
-                ["shopping", `采购清单 ${selectedProducts.length}`],
+                ["analysis", "Room diagnosis"],
+                ["style", "Style directions"],
+                ["shopping", `Shopping list ${selectedProducts.length}`],
               ] as Array<[RoomTab, string]>).map(([tab, label]) => (
                 <button
                   key={tab}
@@ -1257,8 +1257,8 @@ function RoomDemo() {
                   </div>
                   <div className="constraint-section">
                     <div className="tab-section-heading">
-                      <div><span>租房约束</span><small>点击可调整推荐偏好</small></div>
-                      <b>{Object.values(constraints).filter(Boolean).length} 项已启用</b>
+                      <div><span>Rental constraints</span><small>Click to adjust recommendation preferences</small></div>
+                      <b>{Object.values(constraints).filter(Boolean).length} active</b>
                     </div>
                     <div className="constraint-row">
                       {(Object.keys(constraintLabels) as RoomConstraint[]).map((constraint) => (
@@ -1279,7 +1279,7 @@ function RoomDemo() {
                     </div>
                   </div>
                   <button className="tab-next-button" type="button" onClick={() => setActiveTab("style")}>
-                    查看 3 个风格方案 <Arrow />
+                    View 3 style directions <Arrow />
                   </button>
                 </div>
               )}
@@ -1304,11 +1304,11 @@ function RoomDemo() {
                     ))}
                   </div>
                   <div className="room-logic">
-                    <span>为什么适合</span>
+                    <span>Why it works</span>
                     <p>{activeStyle.reasoning}</p>
                   </div>
                   <button className="tab-next-button" type="button" onClick={() => setActiveTab("shopping")}>
-                    按这个风格选商品 <Arrow />
+                    Shop this style <Arrow />
                   </button>
                 </div>
               )}
@@ -1317,10 +1317,10 @@ function RoomDemo() {
                 <div className="shopping-tab">
                   <div className="budget-control">
                     <div className="tab-section-heading">
-                      <div><span>软装预算</span><small>只影响本次 Demo 清单</small></div>
+                      <div><span>Styling budget</span><small>Applies only to this demo list</small></div>
                       <b>¥{budget}</b>
                     </div>
-                    <div className="budget-options" aria-label="预算选择">
+                    <div className="budget-options" aria-label="Budget selection">
                       {[500, 800, 1200].map((amount) => (
                         <button
                           key={amount}
@@ -1334,7 +1334,7 @@ function RoomDemo() {
                     </div>
                   </div>
 
-                  <div className="shopping-list" aria-label="可选择的软装商品">
+                  <div className="shopping-list" aria-label="Selectable styling products">
                     {activeStyle.products.map((product) => {
                       const selected = selectedProductIds.includes(product.id);
                       return (
@@ -1356,19 +1356,19 @@ function RoomDemo() {
 
                   <div className={`budget-summary ${selectedTotal > budget ? "is-over" : ""}`}>
                     <div className="budget-summary-topline">
-                      <span>已选 {selectedProducts.length} 件 · 合计 <b>¥{selectedTotal}</b></span>
-                      <em>{selectedTotal > budget ? `超出 ¥${selectedTotal - budget}` : `还剩 ¥${budget - selectedTotal}`}</em>
+                      <span>Selected {selectedProducts.length} items · Total <b>¥{selectedTotal}</b></span>
+                      <em>{selectedTotal > budget ? `Over by ¥${selectedTotal - budget}` : `¥${budget - selectedTotal}`}</em>
                     </div>
                     <div className="budget-meter"><span style={{ width: `${Math.min((selectedTotal / budget) * 100, 100)}%` }} /></div>
                   </div>
 
                   <div className="shopping-actions">
                     <button type="button" className="copy-list-button" onClick={copyShoppingList} disabled={!selectedProducts.length}>
-                      {copied ? "搜索词已复制 ✓" : "复制淘宝搜索词"}
+                      {copied ? "Search terms copied ✓" : "Copy Taobao search terms"}
                     </button>
                     <div className="taobao-status">
-                      <span>淘宝商品跳转</span>
-                      <b>未接入 · CONCEPT ONLY</b>
+                      <span>Taobao product links</span>
+                      <b>Not connected · CONCEPT ONLY</b>
                     </div>
                   </div>
                 </div>
@@ -1414,44 +1414,44 @@ function EssayDemo() {
   return (
     <div className="essay-demo">
       <header className="essay-demo-hero">
-        <div><span>IELTS ACADEMIC WRITING · TASK 1</span><h4>全球森林与木材分布</h4><p>段落式中译英训练：引言 → 概述 → 数据细节</p></div>
-        <b>{completed} / 2 已作答</b>
+        <div><span>IELTS ACADEMIC WRITING · TASK 1</span><h4>Global Distribution of Forests and Timber</h4><p>Paragraph-based Chinese-to-English practice: introduction → overview → data details</p></div>
+        <b>{completed} / 2 answered</b>
         <div className="essay-demo-track"><span style={{ width: `${completed * 50}%` }} /></div>
       </header>
 
       <div className="essay-toolbar">
-        <button type="button" onClick={() => setShowSource((value) => !value)}>{showSource ? "隐藏段落原文" : "显示段落原文"}</button>
-        <button type="button" onClick={() => setShowRef(true)}>显示参考译文</button>
-        <button type="button" onClick={() => { setShowRef(false); setShowFocus(false); }}>隐藏全部答案</button>
+        <button type="button" onClick={() => setShowSource((value) => !value)}>{showSource ? "Hide source paragraph" : "Show source paragraph"}</button>
+        <button type="button" onClick={() => setShowRef(true)}>Show reference answer</button>
+        <button type="button" onClick={() => { setShowRef(false); setShowFocus(false); }}>Hide all answers</button>
       </div>
 
       <section className="essay-paragraph-card">
         <div className="essay-demo-top">
-          <div><span className="demo-kicker">PARAGRAPH {index + 1}</span><h4>{current.label}｜{current.title}</h4><p className="essay-purpose"><b>本段功能：</b>先理解段落在全文中的作用，再检查数据、比较关系和衔接方式。</p></div>
-          <button type="button" onClick={next}>切换段落 <Arrow /></button>
+          <div><span className="demo-kicker">PARAGRAPH {index + 1}</span><h4>{current.label}｜{current.title}</h4><p className="essay-purpose"><b>Paragraph purpose:</b>First understand the paragraph's role, then check its data, comparisons, and transitions.</p></div>
+          <button type="button" onClick={next}>Next paragraph <Arrow /></button>
         </div>
 
-        {showSource && <div className="essay-source"><b>本段英文原文</b><p>{current.ref}</p></div>}
+        {showSource && <div className="essay-source"><b>English source paragraph</b><p>{current.ref}</p></div>}
 
         <div className="essay-whole">
-          <div><b>整段翻译（选做）</b><p>先尝试完整组织段落，再进入逐句训练。</p></div>
-          <textarea value={paragraphAnswer} onChange={(event) => setParagraphAnswer(event.target.value)} placeholder="请尝试将这一整段翻译成英文……" />
+          <div><b>Full-paragraph translation (optional)</b><p>Try organizing the full paragraph before moving into sentence practice.</p></div>
+          <textarea value={paragraphAnswer} onChange={(event) => setParagraphAnswer(event.target.value)} placeholder="Try translating the full paragraph into English…" />
         </div>
 
         <article className="essay-sentence-card">
-          <div className="essay-sentence-meta"><span>1</span><p>第 {index + 1} 段 · 句子 1 / 1</p></div>
+          <div className="essay-sentence-meta"><span>1</span><p>Paragraph {index + 1} · Sentence 1 / 1</p></div>
           <p className="essay-zh">{current.zh}</p>
-          <label htmlFor="essay-answer">你的英文翻译</label>
-          <textarea id="essay-answer" value={answer} onChange={(event) => setAnswer(event.target.value)} placeholder="请独立翻译这句话……" />
+          <label htmlFor="essay-answer">Your English translation</label>
+          <textarea id="essay-answer" value={answer} onChange={(event) => setAnswer(event.target.value)} placeholder="Translate this sentence on your own…" />
           <div className="essay-answer-buttons">
-            <button type="button" onClick={() => setShowRef((value) => !value)}>{showRef ? "隐藏参考译文" : "显示参考译文"}</button>
-            <button type="button" onClick={() => setShowFocus((value) => !value)}>{showFocus ? "隐藏语法重点" : "显示语法重点"}</button>
+            <button type="button" onClick={() => setShowRef((value) => !value)}>{showRef ? "Hide reference answer" : "Show reference answer"}</button>
+            <button type="button" onClick={() => setShowFocus((value) => !value)}>{showFocus ? "Hide grammar notes" : "Show grammar notes"}</button>
           </div>
-          {showRef && <div className="essay-reference is-ref"><b>参考译文</b><p>{current.ref}</p></div>}
-          {showFocus && <div className="essay-reference is-focus"><b>本句核心表达</b><p>{current.focus}</p></div>}
+          {showRef && <div className="essay-reference is-ref"><b>Reference answer</b><p>{current.ref}</p></div>}
+          {showFocus && <div className="essay-reference is-focus"><b>Key expressions</b><p>{current.focus}</p></div>}
         </article>
 
-        <div className="essay-drill"><span>核心词汇与语法挖空</span><p>{current.blank}</p><button type="button" onClick={() => setShowRef((value) => !value)}>查看对应原句</button></div>
+        <div className="essay-drill"><span>Key vocabulary & grammar cloze</span><p>{current.blank}</p><button type="button" onClick={() => setShowRef((value) => !value)}>View source sentence</button></div>
       </section>
     </div>
   );
@@ -1494,17 +1494,17 @@ function SpellingDemo() {
   return (
     <div className="demo-layout spelling-demo">
       <div className="demo-panel flashcard-panel">
-        <span className="demo-kicker">闪卡 {index + 1} / {spellingWords.length}</span>
+        <span className="demo-kicker">Flashcard {index + 1} / {spellingWords.length}</span>
         <h4>{current.meaning}</h4>
-        <p className="demo-hint-word" aria-label="拼写提示">{hintWord}</p>
-        <div className="hint-buttons" aria-label="提示强度">
-          <button type="button" className={hint === 0 ? "active" : ""} onClick={() => setHint(0)}>全遮</button>
-          <button type="button" className={hint === 1 ? "active" : ""} onClick={() => setHint(1)}>露字母</button>
-          <button type="button" className={hint === 2 ? "active" : ""} onClick={() => setHint(2)}>看答案</button>
+        <p className="demo-hint-word" aria-label="Spelling prompt">{hintWord}</p>
+        <div className="hint-buttons" aria-label="Hint strength">
+          <button type="button" className={hint === 0 ? "active" : ""} onClick={() => setHint(0)}>Hidden</button>
+          <button type="button" className={hint === 1 ? "active" : ""} onClick={() => setHint(1)}>Letters</button>
+          <button type="button" className={hint === 2 ? "active" : ""} onClick={() => setHint(2)}>Answer</button>
         </div>
       </div>
       <form className="demo-panel spelling-answer-panel" onSubmit={check}>
-        <label htmlFor="spelling-answer">根据中文提示拼写</label>
+        <label htmlFor="spelling-answer">Spell from the Chinese prompt</label>
         <input
           id="spelling-answer"
           value={answer}
@@ -1515,12 +1515,12 @@ function SpellingDemo() {
           autoComplete="off"
           placeholder="Type the word"
         />
-        {status === "right" && <p className="answer-status right" aria-live="polite">拼写正确。再答对一次即可移出错词池。</p>}
-        {status === "wrong" && <p className="answer-status wrong" aria-live="polite">还差一点。可以先露出几个字母再试。</p>}
+        {status === "right" && <p className="answer-status right" aria-live="polite">Correct. One more correct answer removes it from the review pool.</p>}
+        {status === "wrong" && <p className="answer-status wrong" aria-live="polite">Not quite. Reveal a few letters and try again.</p>}
         {status === "idle" && <p className="sample-sentence">{current.sentence.replace(new RegExp(current.word, "i"), "________")}</p>}
         <div className="answer-actions">
-          <button className="demo-primary" type="submit">检查拼写</button>
-          <button className="demo-secondary" type="button" onClick={next}>下一词 <Arrow /></button>
+          <button className="demo-primary" type="submit">Check spelling</button>
+          <button className="demo-secondary" type="button" onClick={next}>Next word <Arrow /></button>
         </div>
       </form>
     </div>
@@ -1557,7 +1557,7 @@ function DemoModal({ type, onClose }: { type: DemoType; onClose: () => void }) {
             <h3 id="demo-title">{project.title}</h3>
             <p>{project.subtitle}</p>
           </div>
-          <button className="modal-close" type="button" onClick={onClose} aria-label="关闭演示">×</button>
+          <button className="modal-close" type="button" onClick={onClose} aria-label="Close demo">×</button>
         </div>
         {type === "arcproof" && <ArcDemo />}
         {type === "room" && <RoomDemo />}
@@ -1565,19 +1565,19 @@ function DemoModal({ type, onClose }: { type: DemoType; onClose: () => void }) {
         {type === "spelling" && <SpellingDemo />}
         <p className="demo-disclaimer">
           {type === "arcproof"
-            ? "这是基于 ArcProof 0.6 真实产品结构制作的交互样例，使用预置素材演示完整工作流；本地正式版会调用 FFmpeg、FunASR、Qwen3-VL 与 DeepSeek Agent。"
+            ? "This interactive sample follows the real ArcProof 0.6 product structure and uses preset assets to demonstrate the full workflow. The local product calls FFmpeg, FunASR, Qwen3-VL, and a DeepSeek agent."
             : type === "room"
-              ? "照片只在当前浏览器中预览；推荐结果为 Demo 示例，淘宝购买跳转尚未接入。"
+              ? "Photos are previewed only in the current browser. Recommendations are demo examples, and Taobao purchase links are not connected."
               : type === "essay"
-                ? "这是译构的核心训练链路：把范文拆成段落功能、翻译练习和表达挖空，所有内容均可在当前页面交互。"
-                : "这是核心学习链路的轻量试用版。"}
+                ? "This is Draftline's core practice loop: a model essay is broken into paragraph purpose, translation exercises, and expression cloze tasks—all interactive on this page."
+                : "This is a lightweight trial of the core learning loop."}
         </p>
       </section>
     </div>
   );
 }
 
-export default function Home() {
+export default function HomeEnglish() {
   const [activeDemo, setActiveDemo] = useState<DemoType | null>(null);
   const [activeFilm, setActiveFilm] = useState<string | null>(null);
   const [selectedFilm, setSelectedFilm] = useState(filmWorks[0].id);
@@ -1628,28 +1628,28 @@ export default function Home() {
   return (
     <main>
       <header className="site-header">
-        <a className="wordmark" href="#home" aria-label="返回首页">
+        <a className="wordmark" href="#home" aria-label="Back to home">
           <span>WY</span>
-          <b>胡文悦</b>
+          <b>Wenyue Hu</b>
         </a>
         <button
           type="button"
           className="menu-button"
-          aria-label={menuOpen ? "关闭导航" : "打开导航"}
+          aria-label={menuOpen ? "Close navigation" : "Open navigation"}
           aria-expanded={menuOpen}
           onClick={() => setMenuOpen((value) => !value)}
         >
           <span />
           <span />
         </button>
-        <nav className={menuOpen ? "is-open" : ""} aria-label="页面导航">
-          <a href="#home" onClick={() => setMenuOpen(false)}>首页</a>
-          <a href="#experience" onClick={() => setMenuOpen(false)}>经历</a>
-          <a href="#works" onClick={() => setMenuOpen(false)}>作品</a>
-          <a href="#content" onClick={() => setMenuOpen(false)}>创作</a>
-          <a className="nav-language" href="/en/" aria-label="Switch to English">EN</a>
-          <a className="nav-resume" href="/hu-wenyue-resume.pdf" target="_blank" rel="noreferrer">
-            查看简历 <Arrow diagonal />
+        <nav className={menuOpen ? "is-open" : ""} aria-label="Page navigation">
+          <a href="#home" onClick={() => setMenuOpen(false)}>Home</a>
+          <a href="#experience" onClick={() => setMenuOpen(false)}>Experience</a>
+          <a href="#works" onClick={() => setMenuOpen(false)}>Projects</a>
+          <a href="#content" onClick={() => setMenuOpen(false)}>Films</a>
+          <a className="nav-language" href="/" aria-label="Switch to Chinese">中文</a>
+          <a className="nav-resume" href="/wenyue-hu-resume-en.pdf" target="_blank" rel="noreferrer">
+            Résumé <Arrow diagonal />
           </a>
         </nav>
       </header>
@@ -1657,14 +1657,14 @@ export default function Home() {
       <section className="hero section-shell" id="home">
         <div className="hero-copy">
           <p className="hero-role">AI PRODUCT · CONTENT · FILM</p>
-          <h1>你好，我是<br />胡文悦。</h1>
+          <h1>Hi, I'm<br />Wenyue Hu。</h1>
           <div className="hero-actions">
-            <a className="primary-button" href="/hu-wenyue-resume.pdf" target="_blank" rel="noreferrer">
-              一键查看简历 <Arrow />
+            <a className="primary-button" href="/wenyue-hu-resume-en.pdf" target="_blank" rel="noreferrer">
+              View résumé <Arrow />
             </a>
-            <a className="text-button" href="#works">看看我做的产品 <Arrow /></a>
+            <a className="text-button" href="#works">Explore my products <Arrow /></a>
           </div>
-          <div className="hero-capabilities" aria-label="核心能力">
+          <div className="hero-capabilities" aria-label="Core capabilities">
             {heroCapabilities.map((capability) => (
               <article key={capability.index}>
                 <span>{capability.index}</span>
@@ -1692,39 +1692,39 @@ export default function Home() {
           <div className="section-heading">
             <div>
               <p className="section-index"><span>02</span> / EXPERIENCE</p>
-              <h2>研究人，也研究产品。</h2>
+              <h2>I study people—and products.</h2>
             </div>
-            <p>从语言、影像到 AI 学习产品，我的经历看似跨界，但始终围绕同一件事：理解人如何表达、学习和做决定。</p>
+            <p>My work spans language, film, and AI learning products, but it is all driven by the same question: how people express themselves, learn, and make decisions.</p>
           </div>
 
           <div className="experience-grid">
             <aside className="education-card glass-card">
-              <p className="card-label">教育背景</p>
+              <p className="card-label">Education</p>
               <article>
                 <span className="edu-time">2026.10 — 2027.07</span>
-                <h3>剑桥大学</h3>
+                <h3>University of Cambridge</h3>
                 <p>MPhil in Film and Screen Studies</p>
-                <small>即将入读 · 电影与屏幕研究硕士</small>
+                <small>Incoming MPhil · Film and Screen Studies</small>
               </article>
               <article>
                 <span className="edu-time">2022.09 — 2026.07</span>
-                <h3>清华大学</h3>
-                <p>汉语言文学 · 本科</p>
-                <small>GPA 3.9 / 4.0 · 前 10% · 2025 国家奖学金</small>
+                <h3>Tsinghua University</h3>
+                <p>BA · Chinese Language and Literature</p>
+                <small>GPA 3.9 / 4.0 · Top 10% · 2025 National Scholarship</small>
               </article>
               <div className="education-footer">
                 <span>IELTS 8.0</span>
                 <span>Python & Digital Humanities</span>
-                <span>学生记者团团长</span>
+                <span>President, Tsinghua Student Press Corps</span>
               </div>
             </aside>
 
             <div className="career-experience">
               <div className="career-label-row">
-                <p className="card-label">实习时间轴</p>
-                <span>点击节点查看详情</span>
+                <p className="card-label">Internship Timeline</p>
+                <span>Select a point for details</span>
               </div>
-              <div className="career-timeline" role="tablist" aria-label="实习经历时间轴">
+              <div className="career-timeline" role="tablist" aria-label="Internship experience timeline">
                 {internships.map((item, index) => (
                   <button
                     type="button"
@@ -1798,9 +1798,9 @@ export default function Home() {
         <div className="section-heading works-heading">
           <div>
             <p className="section-index"><span>03</span> / VIBE CODING WORKS</p>
-            <h2>从“我需要一个工具”开始。</h2>
+            <h2>Start with: I need a tool for this.</h2>
           </div>
-          <p>这些作品都来自我或身边的人反复遇到的问题。我先拆解使用场景，再借助 Codex 与 Claude Code 把想法变成能跑、能试、能继续迭代的产品。</p>
+          <p>Each project began with a problem that I or someone around me kept encountering. I broke down the use case, then used Codex and Claude Code to turn the idea into a product that runs, can be tested, and has room to evolve.</p>
         </div>
 
         <div className="project-list">
@@ -1809,7 +1809,7 @@ export default function Home() {
               <div className="project-preview">
                 <ProjectVisual type={project.id} />
                 <button className="preview-trigger" type="button" onClick={() => setActiveDemo(project.id)}>
-                  点击体验交互 <Arrow />
+                  Try the interaction <Arrow />
                 </button>
               </div>
               <div className="project-copy">
@@ -1825,11 +1825,11 @@ export default function Home() {
                 </ul>
                 <div className="project-actions">
                   <button className="primary-button" type="button" onClick={() => setActiveDemo(project.id)}>
-                    试用作品 <Arrow />
+                    Try the project <Arrow />
                   </button>
                   {project.link && (
                     <a className="text-button" href={project.link} target="_blank" rel="noreferrer">
-                      GitHub 源码 <Arrow diagonal />
+                      GitHub source <Arrow diagonal />
                     </a>
                   )}
                 </div>
@@ -1844,21 +1844,21 @@ export default function Home() {
           <div className="section-heading content-heading">
             <div>
               <p className="section-index"><span>04</span> / CONTENT & VIDEO</p>
-              <h2>也用镜头，理解人。</h2>
+              <h2>I also understand people through a camera.</h2>
             </div>
-            <p>产品之外，我长期做内容和影像。对平台、节奏与叙事的判断，也构成了我理解用户和创作工具的另一条路径。</p>
+            <p>Beyond product work, I have long worked with content and film. Thinking about platforms, pacing, and narrative gives me another way to understand users and creative tools.</p>
           </div>
 
-          <aside className="content-practice" aria-label="DramaBox 内容创作经历">
+          <aside className="content-practice" aria-label="DramaBox content experience">
             <div className="content-practice-copy">
               <span>CONTENT PRACTICE · DRAMABOX</span>
-              <h3>把平台数据，带回下一次创作判断。</h3>
-              <p>负责海外短剧社媒内容的选题、剪辑和平台适配。这里不展示未公开的商业素材，只保留可验证的结果与方法。</p>
+              <h3>Feed platform data back into the next creative decision.</h3>
+              <p>Selected topics, edited videos, and adapted social content for an overseas short-drama platform. Unreleased commercial footage is not shown here; only verifiable results and methods are included.</p>
             </div>
             <div className="content-practice-metrics">
-              <article><strong>9M+</strong><span>累计播放</span></article>
-              <article><strong>300K+</strong><span>累计点赞</span></article>
-              <article><strong>04</strong><span>海外平台</span></article>
+              <article><strong>9M+</strong><span>Total views</span></article>
+              <article><strong>300K+</strong><span>Total likes</span></article>
+              <article><strong>04</strong><span>Global platforms</span></article>
             </div>
           </aside>
 
@@ -1866,16 +1866,16 @@ export default function Home() {
             <div className="film-showcase-head">
               <div>
                 <span>SELECTED FILMS · 04 WORKS</span>
-                <h3>三部纪录片，一部虚构短片。</h3>
+                <h3>Three documentaries and one fiction short.</h3>
               </div>
-              <p>选择右侧作品即可切换主舞台。四部作品都已接入 YouTube 完整成片，可直接在站内观看。</p>
+              <p>Select a film on the right to bring it to the main stage. All four complete works are embedded from YouTube and can be watched here.</p>
             </div>
 
-            <div className="film-filter" aria-label="筛选影像作品">
+            <div className="film-filter" aria-label="Filter films">
               {([
-                ["all", "全部作品"],
-                ["documentary", "纪录片"],
-                ["fiction", "虚构短片"],
+                ["all", "All films"],
+                ["documentary", "Documentary"],
+                ["fiction", "Fiction short"],
               ] as const).map(([value, label]) => (
                 <button
                   type="button"
@@ -1902,13 +1902,13 @@ export default function Home() {
         <div className="section-shell footer-inner">
           <div>
             <span className="eyebrow">LET&apos;S BUILD SOMETHING USEFUL</span>
-            <h2>想聊聊 AI 产品、影像，或者一个值得做出来的问题？</h2>
+            <h2>Want to talk about AI products, film, or a problem worth building for?</h2>
           </div>
           <div className="footer-contact">
             <a href="mailto:nicolehwy@163.com">nicolehwy@163.com <Arrow diagonal /></a>
-            <button type="button" onClick={copyContact} aria-label="复制电话和微信号 15210890818">
-              电话 / 微信 · 15210890818
-              <span aria-live="polite">{contactCopied ? "已复制" : "复制"}</span>
+            <button type="button" onClick={copyContact} aria-label="Copy phone and WeChat number 15210890818">
+              Phone / WeChat · 15210890818
+              <span aria-live="polite">{contactCopied ? "Copied" : "Copy"}</span>
             </button>
             <a href="https://github.com/WenyueH8" target="_blank" rel="noreferrer">GitHub / WenyueH8 <Arrow diagonal /></a>
             <p>© 2026 Hu Wenyue · Designed & coded with curiosity.</p>
