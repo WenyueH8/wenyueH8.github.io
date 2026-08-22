@@ -1657,7 +1657,7 @@ export default function HomeEnglish() {
       <section className="hero section-shell" id="home">
         <div className="hero-copy">
           <p className="hero-role">AI PRODUCT · CONTENT · FILM</p>
-          <h1>Hi, I'm<br />Wenyue Hu。</h1>
+          <h1>Hi, I'm<br />Wenyue Hu.</h1>
           <div className="hero-actions">
             <a className="primary-button" href="/wenyue-hu-resume-en.pdf" target="_blank" rel="noreferrer">
               View résumé <Arrow />

@@ -504,6 +504,7 @@ code = code
   .replaceAll('Rattan storage basket 带盖 小户型', '藤编收纳篮 带盖 小户型')
   .replaceAll('Brass reading lamp 复古 租房', '黄铜阅读灯 复古 租房')
   .replaceAll('No drilling 焦糖棕 窗帘', '免打孔 焦糖棕 窗帘')
+  .replaceAll('Wenyue Hu。', 'Wenyue Hu.')
   .replace('risk: "低" | "中" | "高";', 'risk: "Low" | "Medium" | "High";')
   .replaceAll('risk: "低"', 'risk: "Low"')
   .replaceAll('risk: "中"', 'risk: "Medium"')
